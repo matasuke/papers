@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>papers</title><link href="https://matasukef.github.io/papers/" rel="alternate"></link><link href="https://matasukef.github.io/papers/feeds/all.atom.xml" rel="self"></link><id>https://matasukef.github.io/papers/</id><updated>2018-06-12T00:00:00+09:00</updated><entry><title>"2D/3D Pose Estimation and Action Recognition using Multitask Deep Learning"</title><link href="https://matasukef.github.io/papers/2d3d-pose-estimation-and-action-recognition-using-multitask-deep-learning.html" rel="alternate"></link><published>2018-06-12T00:00:00+09:00</published><updated>2018-06-12T00:00:00+09:00</updated><author><name>Kosuke Futamata</name></author><id>tag:matasukef.github.io,2018-06-12:/papers/2d3d-pose-estimation-and-action-recognition-using-multitask-deep-learning.html</id><summary type="html">&lt;h2&gt;1. どんなもの？&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Paper Survey</title><link href="https://matasukef.github.io/papers/" rel="alternate"></link><link href="https://matasukef.github.io/papers/feeds/all.atom.xml" rel="self"></link><id>https://matasukef.github.io/papers/</id><updated>2018-06-12T00:00:00+09:00</updated><entry><title>2D/3D Pose Estimation and Action Recognition using Multitask Deep Learning</title><link href="https://matasukef.github.io/papers/2d3d-pose-estimation-and-action-recognition-using-multitask-deep-learning.html" rel="alternate"></link><published>2018-06-12T00:00:00+09:00</published><updated>2018-06-12T00:00:00+09:00</updated><author><name>Kosuke Futamata</name></author><id>tag:matasukef.github.io,2018-06-12:/papers/2d3d-pose-estimation-and-action-recognition-using-multitask-deep-learning.html</id><summary type="html"></summary><content type="html">&lt;h2&gt;1. どんなもの？&lt;/h2&gt;
 &lt;h2&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
 &lt;h2&gt;3. 技術や手法の"キモ"はどこにある？&lt;/h2&gt;
 &lt;h2&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
@@ -10,27 +10,20 @@ for Human Pose Estimation&lt;/p&gt;
 &lt;h3&gt;論文情報・リンク&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="論文リンク"&gt;著者，"タイトル，" ジャーナル名，voluem，no.，ページ，年&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</summary><content type="html">&lt;h2&gt;1. どんなもの？&lt;/h2&gt;
-&lt;h2&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
-&lt;h2&gt;3. 技術や手法の"キモ"はどこにある？&lt;/h2&gt;
-&lt;h2&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
-&lt;h2&gt;5. 議論はあるか？&lt;/h2&gt;
-&lt;h2&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
-&lt;p&gt;A. Newell, K. Yang, and J. Deng. Stacked Hourglass Networks
-for Human Pose Estimation&lt;/p&gt;
-&lt;h3&gt;論文情報・リンク&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="論文リンク"&gt;著者，"タイトル，" ジャーナル名，voluem，no.，ページ，年&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content></entry><entry><title>"Show, Attend and Tell: Neural Image Caption Generation with Visual Attention"</title><link href="https://matasukef.github.io/papers/show-attend-and-tell-neural-image-caption-generation-with-visual-attention.html" rel="alternate"></link><published>2018-06-11T00:00:00+09:00</published><updated>2018-06-11T00:00:00+09:00</updated><author><name>Kosuke Futamata</name></author><id>tag:matasukef.github.io,2018-06-11:/papers/show-attend-and-tell-neural-image-caption-generation-with-visual-attention.html</id><summary type="html">&lt;h2&gt;1. どんなもの？&lt;/h2&gt;
-&lt;h2&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
-&lt;h2&gt;3. 技術や手法の"キモ"はどこにある？&lt;/h2&gt;
-&lt;h2&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
-&lt;h2&gt;5. 議論はあるか？&lt;/h2&gt;
-&lt;h2&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
-&lt;h3&gt;論文情報・リンク&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="論文リンク"&gt;著者，"タイトル，" ジャーナル名，voluem，no.，ページ，年&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</summary><content type="html">&lt;h2&gt;1. どんなもの？&lt;/h2&gt;
+&lt;/ul&gt;</content><category term="Pose Estimation"></category><category term="Action Recognition"></category></entry><entry><title>Paper Survey</title><link href="https://matasukef.github.io/papers/paper-survey.html" rel="alternate"></link><published>2018-06-11T00:00:00+09:00</published><updated>2018-06-11T00:00:00+09:00</updated><author><name>Kosuke Futamata</name></author><id>tag:matasukef.github.io,2018-06-11:/papers/paper-survey.html</id><summary type="html">&lt;h1&gt;Paper Survey&lt;/h1&gt;
+&lt;p&gt;NLPやCVに関連する論文の概要をまとめていきます。
+読む予定の論文は&lt;a href="https://github.com/matasukef/papers/issues"&gt;Issue&lt;/a&gt;に上げます。
+進捗を&lt;a href="https://github.com/matasukef/papers/projects"&gt;Projects&lt;/a&gt;にまとめています。
+概要は&lt;a href="https://github.com/matasukef/papers/blob/master/Format.md"&gt;Format.md&lt;/a&gt;に基づいて作成します。&lt;/p&gt;
+&lt;h1&gt;Format&lt;/h1&gt;
+&lt;p&gt;"""&lt;/p&gt;
+&lt;p&gt;Title: 論文タイトル
+Date: YYYY-MM-DD
+Category:CV, NLP
+Tags: ACL2018, WMT
+Author: Kosuke Futamata
+Summary: hogehoge&lt;/p&gt;
+&lt;h2&gt;1. どんなもの？&lt;/h2&gt;
 &lt;h2&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
 &lt;h2&gt;3. 技術や手法の"キモ"はどこにある？&lt;/h2&gt;
 &lt;h2&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
@@ -38,12 +31,37 @@ for Human Pose Estimation&lt;/p&gt;
 &lt;h2&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
 &lt;h3&gt;論文情報・リンク&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="論文リンク"&gt;著者，"タイトル，" ジャーナル名，voluem，no.，ページ，年&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content></entry><entry><title>ブログタイトル</title><link href="https://matasukef.github.io/papers/0210first_post.html" rel="alternate"></link><published>2017-02-10T23:00:00+09:00</published><updated>2017-02-10T23:00:00+09:00</updated><author><name>yourname</name></author><id>tag:matasukef.github.io,2017-02-10:/papers/0210first_post.html</id><summary type="html">&lt;p&gt;ブログの要約&lt;/p&gt;</summary><content type="html">&lt;h1&gt;ブログのタイトル&lt;/h1&gt;
+&lt;li&gt;&lt;a href="論文リンク"&gt;著者，"タイトル，" ジャーナル名，voluem，no …&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;h1&gt;Paper Survey&lt;/h1&gt;
+&lt;p&gt;NLPやCVに関連する論文の概要をまとめていきます。
+読む予定の論文は&lt;a href="https://github.com/matasukef/papers/issues"&gt;Issue&lt;/a&gt;に上げます。
+進捗を&lt;a href="https://github.com/matasukef/papers/projects"&gt;Projects&lt;/a&gt;にまとめています。
+概要は&lt;a href="https://github.com/matasukef/papers/blob/master/Format.md"&gt;Format.md&lt;/a&gt;に基づいて作成します。&lt;/p&gt;
+&lt;h1&gt;Format&lt;/h1&gt;
+&lt;p&gt;"""&lt;/p&gt;
+&lt;p&gt;Title: 論文タイトル
+Date: YYYY-MM-DD
+Category:CV, NLP
+Tags: ACL2018, WMT
+Author: Kosuke Futamata
+Summary: hogehoge&lt;/p&gt;
+&lt;h2&gt;1. どんなもの？&lt;/h2&gt;
+&lt;h2&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
+&lt;h2&gt;3. 技術や手法の"キモ"はどこにある？&lt;/h2&gt;
+&lt;h2&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
+&lt;h2&gt;5. 議論はあるか？&lt;/h2&gt;
+&lt;h2&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
+&lt;h3&gt;論文情報・リンク&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;List&lt;/li&gt;
-&lt;li&gt;List&lt;/li&gt;
-&lt;li&gt;List&lt;/li&gt;
+&lt;li&gt;&lt;a href="論文リンク"&gt;著者，"タイトル，" ジャーナル名，voluem，no.，ページ，年&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Hello World!&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</content><category term="pelican"></category><category term="python"></category></entry></feed>
+&lt;p&gt;"""&lt;/p&gt;</content></entry><entry><title>Show, Attend and Tell: Neural Image Caption Generation with Visual Attention</title><link href="https://matasukef.github.io/papers/show-attend-and-tell-neural-image-caption-generation-with-visual-attention.html" rel="alternate"></link><published>2018-06-11T00:00:00+09:00</published><updated>2018-06-11T00:00:00+09:00</updated><author><name>Kosuke Futamata</name></author><id>tag:matasukef.github.io,2018-06-11:/papers/show-attend-and-tell-neural-image-caption-generation-with-visual-attention.html</id><summary type="html">&lt;p&gt;画像にAttentionを貼ることによってキャプションを自動生成する手法の提案&lt;/p&gt;</summary><content type="html">&lt;h2&gt;1. どんなもの？&lt;/h2&gt;
+&lt;h2&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
+&lt;h2&gt;3. 技術や手法の"キモ"はどこにある？&lt;/h2&gt;
+&lt;h2&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
+&lt;h2&gt;5. 議論はあるか？&lt;/h2&gt;
+&lt;h2&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
+&lt;h3&gt;論文情報・リンク&lt;/h3&gt;
+&lt;p&gt;https://github.com/kelvinxu/arctic-captions&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="論文リンク"&gt;著者，"タイトル，" ジャーナル名，voluem，no.，ページ，年&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="IDG"></category><category term="Attention"></category></entry></feed>

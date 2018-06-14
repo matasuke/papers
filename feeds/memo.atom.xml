@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>papers - Memo</title><link href="https://matasukef.github.io/papers/" rel="alternate"></link><link href="https://matasukef.github.io/papers/feeds/memo.atom.xml" rel="self"></link><id>https://matasukef.github.io/papers/</id><updated>2017-02-10T23:00:00+09:00</updated><entry><title>ブログタイトル</title><link href="https://matasukef.github.io/papers/0210first_post.html" rel="alternate"></link><published>2017-02-10T23:00:00+09:00</published><updated>2017-02-10T23:00:00+09:00</updated><author><name>yourname</name></author><id>tag:matasukef.github.io,2017-02-10:/papers/0210first_post.html</id><summary type="html">&lt;p&gt;ブログの要約&lt;/p&gt;</summary><content type="html">&lt;h1&gt;ブログのタイトル&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;List&lt;/li&gt;
-&lt;li&gt;List&lt;/li&gt;
-&lt;li&gt;List&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Hello World!&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</content><category term="pelican"></category><category term="python"></category></entry></feed>
