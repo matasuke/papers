@@ -1,44 +1,103 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-        <meta charset="utf-8" />
-        <title>"2D/3D Pose Estimation and Action Recognition using Multitask Deep Learning"</title>
-        <link rel="stylesheet" href="https://matasukef.github.io/papers/theme/css/main.css" />
-        <link href="https://matasukef.github.io/papers/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="papers Atom Feed" />
+<!doctype html>
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <!--[if IE]>
-            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-</head>
+		<title>papers</title>
+		<meta name="description" content="">
+		<meta name="author" content="Kosuke Futamata">
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="https://matasukef.github.io/papers/">papers </a></h1>
-                <nav><ul>
-                    <li><a href="https://matasukef.github.io/papers/category/memo.html">Memo</a></li>
-                    <li class="active"><a href="https://matasukef.github.io/papers/category/misc.html">misc</a></li>
-                </ul></nav>
-        </header><!-- /#banner -->
-<section id="content" class="body">
-  <article>
-    <header>
-      <h1 class="entry-title">
-        <a href="https://matasukef.github.io/papers/2d3d-pose-estimation-and-action-recognition-using-multitask-deep-learning.html" rel="bookmark"
-           title="Permalink to "2D/3D Pose Estimation and Action Recognition using Multitask Deep Learning"">"2D/3D Pose Estimation and Action Recognition using Multitask Deep Learning"</a></h1>
-    </header>
+		<link rel="stylesheet" href="https://matasukef.github.io/papers/theme/css/foundation.css" />
+		<link rel="stylesheet" href="https://matasukef.github.io/papers/theme/css/pygment/monokai.css" />
+		<link rel="stylesheet" href="https://matasukef.github.io/papers/theme/css/custom.css" />
 
-    <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2018-06-12T00:00:00+09:00">
-                Published: Tue 12 June 2018
-        </abbr>
 
-        <address class="vcard author">
-                By                         <a class="url fn" href="https://matasukef.github.io/papers/author/kosuke-futamata.html">Kosuke Futamata</a>
-        </address>
-<p>In <a href="https://matasukef.github.io/papers/category/misc.html">misc</a>.</p>
+		<script src="https://matasukef.github.io/papers/theme/js/modernizr.js"></script>
 
-</footer><!-- /.post-info -->      <h2>1. どんなもの？</h2>
+		<!-- Feeds -->
+		<link href="https://matasukef.github.io/papers/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="papers Atom Feed" />
+
+
+		<!-- mathjax config similar to math.stackexchange -->
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			jax: ["input/TeX", "output/HTML-CSS"],
+			tex2jax: {
+				inlineMath: [ ['$', '$'] ],
+				displayMath: [ ['$$', '$$']],
+				processEscapes: true,
+				skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+			},
+			messageStyle: "none",
+			"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+		});
+		</script>
+		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+	</head>
+	<body>
+		<div class="off-canvas-wrap">
+			<div class="inner-wrap">
+				<!-- mobile top bar to activate nav -->
+				<nav class="tab-bar show-for-small">
+					<section class="left-small">
+						<a class="left-off-canvas-toggle menu-icon" ><span></span></a>
+					</section>
+
+					<section class="middle tab-bar-section">
+						<h1 class="title">papers</h1>
+					</section>
+				</nav>
+
+				<!-- mobile side bar nav -->
+				<aside class="left-off-canvas-menu">
+					<ul class="off-canvas-list">
+						<li><a href="https://matasukef.github.io/papers">Home</a></li>
+						<li><label>Categories</label></li>
+							<li ><a href="https://matasukef.github.io/papers/category/memo.html">Memo</a></li>
+							<li class="active"><a href="https://matasukef.github.io/papers/category/misc.html">misc</a></li>
+
+						<li><label>Links</label></li>
+							<li><a href="http://getpelican.com/">Pelican</a></li>
+							<li><a href="http://python.org/">Python.org</a></li>
+							<li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+							<li><a href="#">You can modify those links in your config file</a></li>
+
+
+
+						<li><label>Social</label></li>
+							<li><a href="#">Another social link</a></li>
+							<li><a href="#">You can add links in your config file</a></li>
+					</ul>	
+				</aside>
+
+				<!-- top bar nav -->
+				<nav class="top-bar hide-for-small-only" data-topbar>
+					<ul class="title-area">
+						<li class="name">
+							<h1><a href="https://matasukef.github.io/papers/">papers</a></h1>
+						</li>
+					</ul>
+
+					<section class="top-bar-section">
+						<ul class="left">
+								<li ><a href="https://matasukef.github.io/papers/category/memo.html">Memo</a></li>
+								<li class="active"><a href="https://matasukef.github.io/papers/category/misc.html">misc</a></li>
+						</ul>
+                        <ul class="right">                                                                                                                                           
+                                                                                                                                             
+                        </ul>  
+					</section>
+				</nav>
+
+				<!-- Main Page Content and Sidebar -->
+				<section class="main-section">
+					<div class="row">
+						<!-- Main Content -->
+						<div class="medium-9 small-12 columns" role="content">
+<article>
+	<h2>"2D/3D Pose Estimation and Action Recognition using Multitask Deep Learning"</h2>
+	<h2>1. どんなもの？</h2>
 <h2>2. 先行研究と比べてどこがすごいの？</h2>
 <h2>3. 技術や手法の"キモ"はどこにある？</h2>
 <h2>4. どうやって有効だと検証した？</h2>
@@ -50,38 +109,60 @@ for Human Pose Estimation</p>
 <ul>
 <li><a href="論文リンク">著者，"タイトル，" ジャーナル名，voluem，no.，ページ，年</a></li>
 </ul>
-    </div><!-- /.entry-content -->
+	<hr/>
+	<h6>Written by <a href="https://matasukef.github.io/papers/author/kosuke-futamata.html">Kosuke Futamata</a> in <a href="https://matasukef.github.io/papers/category/misc.html">misc</a> on Tue 12 June 2018.</h6>
+</article>
 
-  </article>
-</section>
-        <section id="extras" class="body">
-                <div class="blogroll">
-                        <h2>links</h2>
-                        <ul>
-                            <li><a href="http://getpelican.com/">Pelican</a></li>
-                            <li><a href="http://python.org/">Python.org</a></li>
-                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-                            <li><a href="#">You can modify those links in your config file</a></li>
-                        </ul>
-                </div><!-- /.blogroll -->
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
-                            <li><a href="https://matasukef.github.io/papers/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+<hr/>
+						</div>
+						<!-- End Main Content -->
+						<!-- Sidebar -->
+						<aside class="medium-3 hide-for-small-only columns">
+							<div class="panel">
+								<h5>Links</h5>
+								<ul class="side-nav">
+									<li><a href="http://getpelican.com/">Pelican</a></li>
+									<li><a href="http://python.org/">Python.org</a></li>
+									<li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+									<li><a href="#">You can modify those links in your config file</a></li>
+								</ul>
+							</div>
 
-                            <li><a href="#">You can add links in your config file</a></li>
-                            <li><a href="#">Another social link</a></li>
-                        </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
+							<div class="panel">
+								<h5>Tags</h5>
+								<ul class="tag-cloud">
+								</ul>
+							</div>
 
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
 
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-        </footer><!-- /#contentinfo -->
+							<div class="panel">
+								<h5>Social</h5>
+								<ul class="side-nav">
+									<li><a href="#">Another social link</a></li>
+									<li><a href="#">You can add links in your config file</a></li>
+								</ul>
+							</div>
+						</aside>
+						<!-- End Sidebar -->
+					</div>
 
-</body>
+					<!-- Footer -->
+					<footer class="row">
+						<div class="medium-9 small-12">
+							<hr/>
+							<p class="text-center">Powered by <a href="http://getpelican.com">Pelican</a> and <a href="http://foundation.zurb.com/">Zurb Foundation</a>. Theme by <a href="http://hamaluik.com">Kenton Hamaluik</a>.</p>
+						</div>
+					</footer>
+					<!-- End Footer -->
+				</section>
+				<a class="exit-off-canvas"></a>
+			</div><!--off-canvas inner-->
+		</div><!--off-canvas wrap-->
+
+		<script src="https://matasukef.github.io/papers/theme/js/jquery.js"></script>
+		<script src="https://matasukef.github.io/papers/theme/js/foundation.min.js"></script>
+		<script>
+			$(document).foundation();
+		</script>
+	</body>
 </html>

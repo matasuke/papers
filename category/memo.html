@@ -1,75 +1,164 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-        <meta charset="utf-8" />
-        <title>papers - Memo</title>
-        <link rel="stylesheet" href="https://matasukef.github.io/papers/theme/css/main.css" />
-        <link href="https://matasukef.github.io/papers/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="papers Atom Feed" />
+<!doctype html>
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <!--[if IE]>
-            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-</head>
+		<title>papers</title>
+		<meta name="description" content="">
+		<meta name="author" content="Kosuke Futamata">
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="https://matasukef.github.io/papers/">papers </a></h1>
-                <nav><ul>
-                    <li class="active"><a href="https://matasukef.github.io/papers/category/memo.html">Memo</a></li>
-                    <li><a href="https://matasukef.github.io/papers/category/misc.html">misc</a></li>
-                </ul></nav>
-        </header><!-- /#banner -->
+		<link rel="stylesheet" href="https://matasukef.github.io/papers/theme/css/foundation.css" />
+		<link rel="stylesheet" href="https://matasukef.github.io/papers/theme/css/pygment/monokai.css" />
+		<link rel="stylesheet" href="https://matasukef.github.io/papers/theme/css/custom.css" />
 
-            <aside id="featured" class="body">
-                <article>
-                    <h1 class="entry-title"><a href="https://matasukef.github.io/papers/0210first_post.html">ブログタイトル</a></h1>
-<footer class="post-info">
-        <abbr class="published" title="2017-02-10T23:00:00+09:00">
-                Published: Fri 10 February 2017
-        </abbr>
 
-        <address class="vcard author">
-                By                         <a class="url fn" href="https://matasukef.github.io/papers/author/yourname.html">yourname</a>
-        </address>
-<p>In <a href="https://matasukef.github.io/papers/category/memo.html">Memo</a>.</p>
-<p>tags: <a href="https://matasukef.github.io/papers/tag/pelican.html">pelican</a> <a href="https://matasukef.github.io/papers/tag/python.html">python</a> </p>
-</footer><!-- /.post-info --><h1>ブログのタイトル</h1>
-<ul>
-<li>List</li>
-<li>List</li>
-<li>List</li>
-</ul>
-<div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s1">&#39;Hello World!&#39;</span><span class="p">)</span>
-</pre></div>                </article>
-            </aside><!-- /#featured -->
-        <section id="extras" class="body">
-                <div class="blogroll">
-                        <h2>links</h2>
-                        <ul>
-                            <li><a href="http://getpelican.com/">Pelican</a></li>
-                            <li><a href="http://python.org/">Python.org</a></li>
-                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-                            <li><a href="#">You can modify those links in your config file</a></li>
-                        </ul>
-                </div><!-- /.blogroll -->
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
-                            <li><a href="https://matasukef.github.io/papers/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+		<script src="https://matasukef.github.io/papers/theme/js/modernizr.js"></script>
 
-                            <li><a href="#">You can add links in your config file</a></li>
-                            <li><a href="#">Another social link</a></li>
-                        </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
+		<!-- Feeds -->
+		<link href="https://matasukef.github.io/papers/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="papers Atom Feed" />
 
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
 
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-        </footer><!-- /#contentinfo -->
+		<!-- mathjax config similar to math.stackexchange -->
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			jax: ["input/TeX", "output/HTML-CSS"],
+			tex2jax: {
+				inlineMath: [ ['$', '$'] ],
+				displayMath: [ ['$$', '$$']],
+				processEscapes: true,
+				skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+			},
+			messageStyle: "none",
+			"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+		});
+		</script>
+		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+	</head>
+	<body>
+		<div class="off-canvas-wrap">
+			<div class="inner-wrap">
+				<!-- mobile top bar to activate nav -->
+				<nav class="tab-bar show-for-small">
+					<section class="left-small">
+						<a class="left-off-canvas-toggle menu-icon" ><span></span></a>
+					</section>
 
-</body>
+					<section class="middle tab-bar-section">
+						<h1 class="title">papers</h1>
+					</section>
+				</nav>
+
+				<!-- mobile side bar nav -->
+				<aside class="left-off-canvas-menu">
+					<ul class="off-canvas-list">
+						<li><a href="https://matasukef.github.io/papers">Home</a></li>
+						<li><label>Categories</label></li>
+							<li class="active"><a href="https://matasukef.github.io/papers/category/memo.html">Memo</a></li>
+							<li ><a href="https://matasukef.github.io/papers/category/misc.html">misc</a></li>
+
+						<li><label>Links</label></li>
+							<li><a href="http://getpelican.com/">Pelican</a></li>
+							<li><a href="http://python.org/">Python.org</a></li>
+							<li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+							<li><a href="#">You can modify those links in your config file</a></li>
+
+
+
+						<li><label>Social</label></li>
+							<li><a href="#">Another social link</a></li>
+							<li><a href="#">You can add links in your config file</a></li>
+					</ul>	
+				</aside>
+
+				<!-- top bar nav -->
+				<nav class="top-bar hide-for-small-only" data-topbar>
+					<ul class="title-area">
+						<li class="name">
+							<h1><a href="https://matasukef.github.io/papers/">papers</a></h1>
+						</li>
+					</ul>
+
+					<section class="top-bar-section">
+						<ul class="left">
+								<li class="active"><a href="https://matasukef.github.io/papers/category/memo.html">Memo</a></li>
+								<li ><a href="https://matasukef.github.io/papers/category/misc.html">misc</a></li>
+						</ul>
+                        <ul class="right">                                                                                                                                           
+                                                                                                                                             
+                        </ul>  
+					</section>
+				</nav>
+
+				<!-- Main Page Content and Sidebar -->
+				<section class="main-section">
+					<div class="row">
+						<!-- Main Content -->
+						<div class="medium-9 small-12 columns" role="content">
+							<div class="row">
+								<div class="small-12 columns">
+									<h2>Category: Memo</h2>
+								</div>
+							</div>
+
+<article>
+	<h3><a href="https://matasukef.github.io/papers/0210first_post.html">ブログタイトル</a></h3>
+	<h6>Written by <a href="https://matasukef.github.io/papers/author/yourname.html">yourname</a> in <a href="https://matasukef.github.io/papers/category/memo.html">Memo</a> on Fri 10 February 2017. Tags: <a href="https://matasukef.github.io/papers/tag/pelican.html">pelican</a>, <a href="https://matasukef.github.io/papers/tag/python.html">python</a>, </h6>
+	<p>ブログの要約</p>
+		<p class="continue"><a href="https://matasukef.github.io/papers/0210first_post.html">Continue reading &raquo;</a></p>
+</article>
+<hr />
+
+
+						</div>
+						<!-- End Main Content -->
+						<!-- Sidebar -->
+						<aside class="medium-3 hide-for-small-only columns">
+							<div class="panel">
+								<h5>Links</h5>
+								<ul class="side-nav">
+									<li><a href="http://getpelican.com/">Pelican</a></li>
+									<li><a href="http://python.org/">Python.org</a></li>
+									<li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+									<li><a href="#">You can modify those links in your config file</a></li>
+								</ul>
+							</div>
+
+							<div class="panel">
+								<h5>Tags</h5>
+								<ul class="tag-cloud">
+								</ul>
+							</div>
+
+
+							<div class="panel">
+								<h5>Social</h5>
+								<ul class="side-nav">
+									<li><a href="#">Another social link</a></li>
+									<li><a href="#">You can add links in your config file</a></li>
+								</ul>
+							</div>
+						</aside>
+						<!-- End Sidebar -->
+					</div>
+
+					<!-- Footer -->
+					<footer class="row">
+						<div class="medium-9 small-12">
+							<hr/>
+							<p class="text-center">Powered by <a href="http://getpelican.com">Pelican</a> and <a href="http://foundation.zurb.com/">Zurb Foundation</a>. Theme by <a href="http://hamaluik.com">Kenton Hamaluik</a>.</p>
+						</div>
+					</footer>
+					<!-- End Footer -->
+				</section>
+				<a class="exit-off-canvas"></a>
+			</div><!--off-canvas inner-->
+		</div><!--off-canvas wrap-->
+
+		<script src="https://matasukef.github.io/papers/theme/js/jquery.js"></script>
+		<script src="https://matasukef.github.io/papers/theme/js/foundation.min.js"></script>
+		<script>
+			$(document).foundation();
+		</script>
+	</body>
 </html>
