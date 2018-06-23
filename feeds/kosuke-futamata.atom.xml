@@ -20,11 +20,18 @@ for Human Pose Estimation&lt;/p&gt;
 &lt;h3&gt;論文情報・リンク&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="論文リンク"&gt;著者，"タイトル，" ジャーナル名，voluem，no.，ページ，年&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="Pose Estimation"></category><category term="Action Recognition"></category></entry><entry><title>Paper Survey</title><link href="https://matasukef.github.io/papers/paper-survey.html" rel="alternate"></link><published>2018-06-11T00:00:00+09:00</published><updated>2018-06-11T00:00:00+09:00</updated><author><name>Kosuke Futamata</name></author><id>tag:matasukef.github.io,2018-06-11:/papers/paper-survey.html</id><summary type="html">&lt;ul&gt;
+&lt;/ul&gt;</content><category term="Pose Estimation"></category><category term="Action Recognition"></category></entry><entry><title>Paper Survey</title><link href="https://matasukef.github.io/papers/paper-survey.html" rel="alternate"></link><published>2018-06-11T00:00:00+09:00</published><updated>2018-06-11T00:00:00+09:00</updated><author><name>Kosuke Futamata</name></author><id>tag:matasukef.github.io,2018-06-11:/papers/paper-survey.html</id><summary type="html">&lt;h1&gt;About&lt;/h1&gt;
+&lt;ul&gt;
 &lt;li&gt;NLPやCVに関連する論文の概要をまとめていきます。&lt;/li&gt;
 &lt;li&gt;読む予定の論文は&lt;a href="https://github.com/matasukef/papers/issues"&gt;Issue&lt;/a&gt;に上げます。&lt;/li&gt;
 &lt;li&gt;進捗を&lt;a href="https://github.com/matasukef/papers/projects"&gt;Projects&lt;/a&gt;にまとめています。&lt;/li&gt;
 &lt;li&gt;概要は&lt;a href="https://github.com/matasukef/papers/blob/master/Format.md"&gt;Format.md&lt;/a&gt;に基づいて作成します。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;Contents&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://matasukef.github.io/papers/category/cv.html"&gt;Computer Vision&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://matasukef.github.io/papers/category/nlp.html"&gt;Natural Language Processing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://matasukef.github.io/papers/category/ml.html"&gt;Machine Learning&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1&gt;Format&lt;/h1&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;Title&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="err"&gt;論文タイトル&lt;/span&gt;
@@ -42,17 +49,18 @@ for Human Pose Estimation&lt;/p&gt;
 
 &lt;span class="err"&gt;##&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="err"&gt;どうやって有効だと検証した？&lt;/span&gt;
 
-&lt;span class="err"&gt;##&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="err"&gt;議論はあるか？&lt;/span&gt;
-
-&lt;span class="err"&gt;##&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="err"&gt;次に読むべき論文はあるか？&lt;/span&gt;
-
-&lt;span class="err"&gt;###&lt;/span&gt; &lt;span class="err"&gt;論文情報・リンク&lt;/span&gt;
-
-&lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="err"&gt;著者，&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;タイトル，&amp;quot;&lt;/span&gt; &lt;span class="err"&gt;ジャーナル名，&lt;/span&gt;&lt;span class="n"&gt;voluem&lt;/span&gt;&lt;span class="err"&gt;，&lt;/span&gt;&lt;span class="n"&gt;no …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;ul&gt;
+&lt;span class="err"&gt;##&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="err"&gt;議論はあるか …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;h1&gt;About&lt;/h1&gt;
+&lt;ul&gt;
 &lt;li&gt;NLPやCVに関連する論文の概要をまとめていきます。&lt;/li&gt;
 &lt;li&gt;読む予定の論文は&lt;a href="https://github.com/matasukef/papers/issues"&gt;Issue&lt;/a&gt;に上げます。&lt;/li&gt;
 &lt;li&gt;進捗を&lt;a href="https://github.com/matasukef/papers/projects"&gt;Projects&lt;/a&gt;にまとめています。&lt;/li&gt;
 &lt;li&gt;概要は&lt;a href="https://github.com/matasukef/papers/blob/master/Format.md"&gt;Format.md&lt;/a&gt;に基づいて作成します。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;Contents&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://matasukef.github.io/papers/category/cv.html"&gt;Computer Vision&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://matasukef.github.io/papers/category/nlp.html"&gt;Natural Language Processing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://matasukef.github.io/papers/category/ml.html"&gt;Machine Learning&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1&gt;Format&lt;/h1&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;Title&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="err"&gt;論文タイトル&lt;/span&gt;
