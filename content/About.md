@@ -5,7 +5,6 @@ Category: About
 
 
 # About
-[![Build Status](https://travis-ci.org/matasukef/papers.svg?branch=master)](https://travis-ci.org/matasukef/papers)
 - NLPやCVに関連する論文の概要をまとめていきます。
 - 読む予定の論文は[Issue](https://github.com/matasukef/papers/issues)に上げます。
 - 進捗を[Projects](https://github.com/matasukef/papers/projects)にまとめています。
