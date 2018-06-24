@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Paper Survey - NLP</title><link href="/" rel="alternate"></link><link href="/feeds/nlp.atom.xml" rel="self"></link><id>/</id><updated>2018-06-17T00:00:00+09:00</updated><entry><title>Attention-based Multimodal Neural Machine Translation</title><link href="/attention-based-multimodal-neural-machine-translation.html" rel="alternate"></link><published>2018-06-17T00:00:00+09:00</published><updated>2018-06-17T00:00:00+09:00</updated><author><name>Kosuke Futamata</name></author><id>tag:None,2018-06-17:/attention-based-multimodal-neural-machine-translation.html</id><summary type="html"></summary><content type="html">&lt;h2&gt;1. どんなもの？&lt;/h2&gt;
+&lt;p&gt;入力画像の全体的な特徴と部分的な特徴を組み合わせることによって、画像を用いたMultimodal neural machine translationのSOTAを実現&lt;/p&gt;
+&lt;h2&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
+&lt;h2&gt;3. 技術や手法の"キモ"はどこにある？&lt;/h2&gt;
+&lt;h2&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
+&lt;h2&gt;5. 議論はあるか？&lt;/h2&gt;
+&lt;h2&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
+&lt;h3&gt;論文情報・リンク&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="論文リンク"&gt;著者，"タイトル，" ジャーナル名，voluem，no.，ページ，年&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="MNMT"></category><category term="CV"></category></entry></feed>
