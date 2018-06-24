@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Paper Survey - About</title><link href="https://matasukef.github.io/papers/" rel="alternate"></link><link href="https://matasukef.github.io/papers/feeds/about.atom.xml" rel="self"></link><id>https://matasukef.github.io/papers/</id><updated>2018-06-11T00:00:00+09:00</updated><entry><title>Paper Survey</title><link href="https://matasukef.github.io/papers/paper-survey.html" rel="alternate"></link><published>2018-06-11T00:00:00+09:00</published><updated>2018-06-11T00:00:00+09:00</updated><author><name>Kosuke Futamata</name></author><id>tag:matasukef.github.io,2018-06-11:/papers/paper-survey.html</id><summary type="html">&lt;h1&gt;About&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;NLPやCVに関連する論文の概要をまとめていきます。&lt;/li&gt;
-&lt;li&gt;読む予定の論文は&lt;a href="https://github.com/matasukef/papers/issues"&gt;Issue&lt;/a&gt;に上げます。&lt;/li&gt;
-&lt;li&gt;進捗を&lt;a href="https://github.com/matasukef/papers/projects"&gt;Projects&lt;/a&gt;にまとめています。&lt;/li&gt;
-&lt;li&gt;概要は&lt;a href="https://github.com/matasukef/papers/blob/master/Format.md"&gt;Format.md&lt;/a&gt;に基づいて作成します。&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;&lt;a href="https://travis-ci.org/matasukef/papers"&gt;&lt;img alt="Build Status" src="https://travis-ci.org/matasukef/papers.svg?branch=master"&gt;&lt;/a&gt;
+- NLPやCVに関連する論文の概要をまとめていきます。
+- 読む予定の論文は&lt;a href="https://github.com/matasukef/papers/issues"&gt;Issue&lt;/a&gt;に上げます。
+- 進捗を&lt;a href="https://github.com/matasukef/papers/projects"&gt;Projects&lt;/a&gt;にまとめています。
+- 概要は&lt;a href="https://github.com/matasukef/papers/blob/master/Format.md"&gt;Format.md&lt;/a&gt;に基づいて作成します。&lt;/p&gt;
 &lt;h1&gt;Contents&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://matasukef.github.io/papers/category/cv.html"&gt;Computer Vision&lt;/a&gt;&lt;/li&gt;
@@ -29,12 +28,11 @@
 &lt;span class="err"&gt;##&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="err"&gt;どうやって有効だと検証した？&lt;/span&gt;
 
 &lt;span class="err"&gt;##&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="err"&gt;議論はあるか …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;h1&gt;About&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;NLPやCVに関連する論文の概要をまとめていきます。&lt;/li&gt;
-&lt;li&gt;読む予定の論文は&lt;a href="https://github.com/matasukef/papers/issues"&gt;Issue&lt;/a&gt;に上げます。&lt;/li&gt;
-&lt;li&gt;進捗を&lt;a href="https://github.com/matasukef/papers/projects"&gt;Projects&lt;/a&gt;にまとめています。&lt;/li&gt;
-&lt;li&gt;概要は&lt;a href="https://github.com/matasukef/papers/blob/master/Format.md"&gt;Format.md&lt;/a&gt;に基づいて作成します。&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;&lt;a href="https://travis-ci.org/matasukef/papers"&gt;&lt;img alt="Build Status" src="https://travis-ci.org/matasukef/papers.svg?branch=master"&gt;&lt;/a&gt;
+- NLPやCVに関連する論文の概要をまとめていきます。
+- 読む予定の論文は&lt;a href="https://github.com/matasukef/papers/issues"&gt;Issue&lt;/a&gt;に上げます。
+- 進捗を&lt;a href="https://github.com/matasukef/papers/projects"&gt;Projects&lt;/a&gt;にまとめています。
+- 概要は&lt;a href="https://github.com/matasukef/papers/blob/master/Format.md"&gt;Format.md&lt;/a&gt;に基づいて作成します。&lt;/p&gt;
 &lt;h1&gt;Contents&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://matasukef.github.io/papers/category/cv.html"&gt;Computer Vision&lt;/a&gt;&lt;/li&gt;

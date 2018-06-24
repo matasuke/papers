@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0"><channel><title>Paper Survey - Kosuke Futamata</title><link>https://matasukef.github.io/papers/</link><description>NLPやCVの論文についてまとめていきます</description><lastBuildDate>Sun, 17 Jun 2018 00:00:00 +0900</lastBuildDate><item><title>Attention-based Multimodal Neural Machine Translation</title><link>https://matasukef.github.io/papers/attention-based-multimodal-neural-machine-translation.html</link><description></description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Kosuke Futamata</dc:creator><pubDate>Sun, 17 Jun 2018 00:00:00 +0900</pubDate><guid isPermaLink="false">tag:matasukef.github.io,2018-06-17:/papers/attention-based-multimodal-neural-machine-translation.html</guid><category>MNMT</category><category>CV</category></item><item><title>2D/3D Pose Estimation and Action Recognition using Multitask Deep Learning</title><link>https://matasukef.github.io/papers/2d3d-pose-estimation-and-action-recognition-using-multitask-deep-learning.html</link><description></description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Kosuke Futamata</dc:creator><pubDate>Tue, 12 Jun 2018 00:00:00 +0900</pubDate><guid isPermaLink="false">tag:matasukef.github.io,2018-06-12:/papers/2d3d-pose-estimation-and-action-recognition-using-multitask-deep-learning.html</guid><category>Pose Estimation</category><category>Action Recognition</category></item><item><title>Paper Survey</title><link>https://matasukef.github.io/papers/paper-survey.html</link><description>&lt;h1&gt;About&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;NLPやCVに関連する論文の概要をまとめていきます。&lt;/li&gt;
-&lt;li&gt;読む予定の論文は&lt;a href="https://github.com/matasukef/papers/issues"&gt;Issue&lt;/a&gt;に上げます。&lt;/li&gt;
-&lt;li&gt;進捗を&lt;a href="https://github.com/matasukef/papers/projects"&gt;Projects&lt;/a&gt;にまとめています。&lt;/li&gt;
-&lt;li&gt;概要は&lt;a href="https://github.com/matasukef/papers/blob/master/Format.md"&gt;Format.md&lt;/a&gt;に基づいて作成します。&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;&lt;a href="https://travis-ci.org/matasukef/papers"&gt;&lt;img alt="Build Status" src="https://travis-ci.org/matasukef/papers.svg?branch=master"&gt;&lt;/a&gt;
+- NLPやCVに関連する論文の概要をまとめていきます。
+- 読む予定の論文は&lt;a href="https://github.com/matasukef/papers/issues"&gt;Issue&lt;/a&gt;に上げます。
+- 進捗を&lt;a href="https://github.com/matasukef/papers/projects"&gt;Projects&lt;/a&gt;にまとめています。
+- 概要は&lt;a href="https://github.com/matasukef/papers/blob/master/Format.md"&gt;Format.md&lt;/a&gt;に基づいて作成します。&lt;/p&gt;
 &lt;h1&gt;Contents&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://matasukef.github.io/papers/category/cv.html"&gt;Computer Vision&lt;/a&gt;&lt;/li&gt;
