@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Paper Survey</title><link href="https://matasukef.github.io/papers/" rel="alternate"></link><link href="https://matasukef.github.io/papers/feeds/all.atom.xml" rel="self"></link><id>https://matasukef.github.io/papers/</id><updated>2018-06-17T00:00:00+09:00</updated><entry><title>Attention-based Multimodal Neural Machine Translation</title><link href="https://matasukef.github.io/papers/attention-based-multimodal-neural-machine-translation.html" rel="alternate"></link><published>2018-06-17T00:00:00+09:00</published><updated>2018-06-17T00:00:00+09:00</updated><author><name>Kosuke Futamata</name></author><id>tag:matasukef.github.io,2018-06-17:/papers/attention-based-multimodal-neural-machine-translation.html</id><summary type="html"></summary><content type="html">&lt;h2&gt;1. どんなもの？&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Paper Survey</title><link href="https://matasukef.github.io/papers/" rel="alternate"></link><link href="https://matasukef.github.io/papers/feeds/all-ja.atom.xml" rel="self"></link><id>https://matasukef.github.io/papers/</id><updated>2018-06-28T00:00:00+09:00</updated><entry><title>StyleNet: Generating Attractive Visual Captions with Styles</title><link href="https://matasukef.github.io/papers/stylenet-generating-attractive-visual-captions-with-styles.html" rel="alternate"></link><published>2018-06-28T00:00:00+09:00</published><updated>2018-06-28T00:00:00+09:00</updated><author><name>Kosuke Futamata</name></author><id>tag:matasukef.github.io,2018-06-28:/papers/stylenet-generating-attractive-visual-captions-with-styles.html</id><summary type="html"></summary><content type="html">&lt;h2&gt;1. どんなもの？&lt;/h2&gt;
+&lt;h2&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
+&lt;h2&gt;3. 技術や手法の"キモ"はどこにある？&lt;/h2&gt;
+&lt;h2&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
+&lt;h2&gt;5. 議論はあるか？&lt;/h2&gt;
+&lt;h2&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
+&lt;h3&gt;論文情報・リンク&lt;/h3&gt;
+&lt;p&gt;-&lt;a href="https://www.ijcai.org/proceedings/2017/0492.pdf"&gt;Zhou Zhao, Qifan Yang, Deng Cai, Xiaofei He and Yueting Zhuang. Video Question Answering via Hierarchical Spatio-Temporal Attention Networks. Proceedings of the Twenty-Sixth International Joint Conference on Artificial Intelligence.&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=""&gt;Li Yao, Atousa Torabi, Kyunghyun Cho, Nicolas Ballas, Christopher Pal, Hugo Larochelle, and
+Aaron Courville. Describing videos by exploiting temporal structure. In ICCV, pages 4507–4515, 2015.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="論文リンク"&gt;著者，"タイトル，" ジャーナル名，voluem，no.，ページ，年&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="IDA"></category><category term="CVPR2016"></category></entry><entry><title>Attention-based Multimodal Neural Machine Translation</title><link href="https://matasukef.github.io/papers/attention-based-multimodal-neural-machine-translation.html" rel="alternate"></link><published>2018-06-17T00:00:00+09:00</published><updated>2018-06-17T00:00:00+09:00</updated><author><name>Kosuke Futamata</name></author><id>tag:matasukef.github.io,2018-06-17:/papers/attention-based-multimodal-neural-machine-translation.html</id><summary type="html"></summary><content type="html">&lt;h2&gt;1. どんなもの？&lt;/h2&gt;
 &lt;p&gt;入力画像の全体的な特徴と部分的な特徴を組み合わせることによって、画像を用いたMultimodal neural machine translationのSOTAを実現&lt;/p&gt;
 &lt;h2&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
 &lt;h2&gt;3. 技術や手法の"キモ"はどこにある？&lt;/h2&gt;
