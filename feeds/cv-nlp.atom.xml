@@ -1,5 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Paper Survey - CV, NLP</title><link href="https://matasukef.github.io/papers/" rel="alternate"></link><link href="https://matasukef.github.io/papers/feeds/cv-nlp.atom.xml" rel="self"></link><id>https://matasukef.github.io/papers/</id><updated>2018-06-28T00:00:00+09:00</updated><entry><title>StyleNet: Generating Attractive Visual Captions with Styles</title><link href="https://matasukef.github.io/papers/stylenet-generating-attractive-visual-captions-with-styles.html" rel="alternate"></link><published>2018-06-28T00:00:00+09:00</published><updated>2018-06-28T00:00:00+09:00</updated><author><name>Kosuke Futamata</name></author><id>tag:matasukef.github.io,2018-06-28:/papers/stylenet-generating-attractive-visual-captions-with-styles.html</id><summary type="html"></summary><content type="html">&lt;h2&gt;1. どんなもの？&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Paper Survey - CV, NLP</title><link href="https://matasukef.github.io/papers/" rel="alternate"></link><link href="https://matasukef.github.io/papers/feeds/cv-nlp.atom.xml" rel="self"></link><id>https://matasukef.github.io/papers/</id><updated>2018-07-02T00:00:00+09:00</updated><entry><title>SemStyle: Learning to Generate Stylised Image Captions using Unaligned Text</title><link href="https://matasukef.github.io/papers/semstyle-learning-to-generate-stylised-image-captions-using-unaligned-text.html" rel="alternate"></link><published>2018-07-02T00:00:00+09:00</published><updated>2018-07-02T00:00:00+09:00</updated><author><name>Kosuke Futamata</name></author><id>tag:matasukef.github.io,2018-07-02:/papers/semstyle-learning-to-generate-stylised-image-captions-using-unaligned-text.html</id><summary type="html"></summary><content type="html">&lt;h2&gt;1. どんなもの？&lt;/h2&gt;
+&lt;p&gt;画像からスタイルを適用したキャプションをUnpaired imagesから生成する研究．
+Term Generatorを用いて画像に関連する単語を生成して，生成された単語列からLanguage Generatornを用いてスタイルを適用したキャプションを生成する．&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image1" src="https://matasukef.github.io/papers/images/cv/semstyle/semstyle1.png"&gt;&lt;/p&gt;
+&lt;h2&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
+&lt;p&gt;画像とキャプションのPaired dataからスタイルを適用したキャプションを生成する研究は以前からあったが，スタイルが適用されたキャプションのみから構成されるunpaired data(画像を含まない)のみを用いてスタイルを適用したキャプションを画像から生成する研究としては初．&lt;/p&gt;
+&lt;h2&gt;3. 技術や手法の"キモ"はどこにある？&lt;/h2&gt;
+&lt;p&gt;Term Generator と Language Generatorの階層的構造によってスタイルを適用したキャプションを生成．
+Term Generatorの学習時のみ画像とキャプションから構成されるPaired Dataを用いる．
+Language Generatorの学習には，スタイルが適用されたキャプションのみを用いる．&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image2" src="https://matasukef.github.io/papers/images/cv/semstyle/semstyle2.png"&gt;&lt;/p&gt;
+&lt;h3&gt;Term Generator&lt;/h3&gt;
+&lt;p&gt;意味論的に重要であると考えられる単語の羅列を画像から生成する．
+単語列の生成には，Inception-v3とGRUによるEncoder-Decoder構造を取っている．
+これは元祖Image caption generatorであるShow and tellと同様のネットワーク構造である．&lt;/p&gt;
+&lt;p&gt;また，教師データにはキャプションから前置詞や助詞などの機能語を取り除いたものを用いる
+lemmatizationやPOSなどの処理も施す．
+動詞は画像キャプション生成に重要なワードだが，スタイルを持つためそのまま利用せず、FrameNetを用いて上位概念の単語に置換する．&lt;/p&gt;
+&lt;h3&gt;Language Generator&lt;/h3&gt;
+&lt;p&gt;Term Generatorにより生成された単語の羅列からスタイルを適用したキャプションを生成する．
+Bi-directionalのGRUにAttentionを適用したEncoder-Decoder構造を取っている．&lt;/p&gt;
+&lt;p&gt;教師データには単語の羅列と対応するキャプションが必要であるため，上述の手法によりキャプションから単語の羅列へのマッピングを作成する．
+しかしStyled textを用いて作成された単語の羅列のみを用いてLanguage Generatorを学習させた場合，Paired dataから学習されたTerm Generatorによって出力される単語羅列を分布が異なってしまう(Paired dataの単語羅列がStyledtextの単語羅列に十分に現れるとは想定されないため)
+そこでPaired data内におけるdescriptive CaptionとStyled textの両方を用いてLanguage Generatorを学習させる．
+指定したスタイルのキャプション(Descriptive or Styled)を生成するため，入力される単語羅列の先頭に&lt;Descriptive&gt;,&lt;Styled&gt;などのタグを追加して学習させる(multilingual NMTでよく使われる手法らしい)．&lt;/p&gt;
+&lt;p&gt;Paired Dataによって学習されたTerm Generatorと組み合わせることによって，様々なスタイルのキャプションを生成することが可能になる，&lt;/p&gt;
+&lt;h2&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
+&lt;h3&gt;データセット&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;MSCOCO&lt;/li&gt;
+&lt;li&gt;bookcorpusに含まれる恋愛小説&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;比較対象&lt;/h3&gt;
+&lt;h3&gt;Descriptive Caption&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;CNN+RNN+coco(Show and tellのモデル)&lt;/li&gt;
+&lt;li&gt;StyleNet(Factored LSTMを用いてDescriptive Captionを生成)&lt;/li&gt;
+&lt;li&gt;SemStyle-cocoonly(提案手法でLanguage Generator部分をDescriptive captionのみで学習)&lt;/li&gt;
+&lt;li&gt;SemStyle-coco(提案手法で単語羅列の先頭に&lt;Descriptive&gt;を付与したもの)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Styled caption&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;StyleNet(Factored LSTMを用いてStyled Captionを生成)&lt;/li&gt;
+&lt;li&gt;TermRetrieval(Term Generatorによって生成された単語羅列を用いてStyled textのコーパスから文章を引っ張ってきたもの)&lt;/li&gt;
+&lt;li&gt;neural-storyteller&lt;/li&gt;
+&lt;li&gt;JointEmbedding&lt;/li&gt;
+&lt;li&gt;SemStyle(提案手法)&lt;/li&gt;
+&lt;li&gt;SemStyle-unordered(提案手法でTerm Generatorによって生成される単語羅列のランダムにしたもの)&lt;/li&gt;
+&lt;li&gt;SemStyle-words(提案手法でTerm Generatorによって生成される単語羅列にlemmatizationやPos, FrameNetなどを適用しない)&lt;/li&gt;
+&lt;li&gt;SemStyle-lempos(提案手法でTerm Generatorによって生成される単語羅列にFrameNetを適用しない)&lt;/li&gt;
+&lt;li&gt;SemStyle-romanly(提案手法でTerm Generatorをbookcorpusの恋愛小説のみで学習)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;評価&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;BLEU, METEOR, CIEDErは高いほど良い，&lt;/li&gt;
+&lt;li&gt;SPICE, CLF, LM, GRULMは小さいほど良い．&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="image3" src="https://matasukef.github.io/papers/images/cv/semstyle/semstyle3.png"&gt;
+&lt;img alt="image4" src="https://matasukef.github.io/papers/images/cv/semstyle/semstyle4.png"&gt;&lt;/p&gt;
+&lt;h4&gt;human evaluation&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;(a) 生成されたキャプションがどれほど画像の状況を言い表しているか．&lt;/li&gt;
+&lt;li&gt;(b) 生成されたキャプションがUnrelated, Descriptive, Styledのどれに属するか.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="image6" src="https://matasukef.github.io/papers/images/cv/semstyle/semstyle6.png"&gt;&lt;/p&gt;
+&lt;h2&gt;5. 議論はあるか？&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;(a), (b),(c), (d)は正しく生成されたキャプション．&lt;/li&gt;
+&lt;li&gt;(e), (f)は生成に失敗したキャプション&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="image5" src="https://matasukef.github.io/papers/images/cv/semstyle/semstyle5.png"&gt;&lt;/p&gt;
+&lt;p&gt;生成に成功したキャプションでは，Storyの方がDescriptiveより印象深い単語を使用していることが読み取れる．
+また，過去形や定冠詞の使用，一人称視点からの叙述が見られる．&lt;/p&gt;
+&lt;p&gt;失敗例は文法的には正しいが，常識に反するものが多く見られる．&lt;/p&gt;
+&lt;h2&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.aclweb.org/anthology/Q/Q17/Q17-1024.pdf"&gt;'Melvin Johnson, Mike Schuster, Quoc V. Le, Maxim Krikun,Yonghui Wu, Zhifeng Chen, Nikhil Thorat, Fernanda Viégas,Martin Wattenberg, Greg Corrado, Macduff Hughes, Jeffrey Dean', "Google’s Multilingual Neural Machine Translation System: Enabling Zero-Shot Translation",'EMNLP 2017'&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2017/06/Generating-Attractive-Visual-Captions-with-Styles.pdf"&gt;'Chuang Gan, Zhe Gan, Xiaodong He,Jianfeng Gao,Li Deng', 'StyleNet: Generating Attractive Visual Captions with Styles', 'CVPR 2017'&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;論文情報・リンク&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://arxiv.org/abs/1805.07030"&gt;"Alexander Mathews, Lexing Xie, Xuming He"，"SemStyle: Learning to Generate Stylised Image Captions using Unaligned Text"，"CVPR 2018"，2018&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="IDG"></category><category term="CVPR2018"></category></entry><entry><title>StyleNet: Generating Attractive Visual Captions with Styles</title><link href="https://matasukef.github.io/papers/stylenet-generating-attractive-visual-captions-with-styles.html" rel="alternate"></link><published>2018-06-28T00:00:00+09:00</published><updated>2018-06-28T00:00:00+09:00</updated><author><name>Kosuke Futamata</name></author><id>tag:matasukef.github.io,2018-06-28:/papers/stylenet-generating-attractive-visual-captions-with-styles.html</id><summary type="html"></summary><content type="html">&lt;h2&gt;1. どんなもの？&lt;/h2&gt;
 &lt;h2&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
 &lt;h2&gt;3. 技術や手法の"キモ"はどこにある？&lt;/h2&gt;
 &lt;h2&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
