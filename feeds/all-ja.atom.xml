@@ -4,7 +4,7 @@
 Term Generatorを用いて画像に関連する単語を生成して，生成された単語列からLanguage Generatornを用いてスタイルを適用したキャプションを生成する．&lt;/p&gt;
 &lt;p&gt;&lt;img alt="image1" src="https://matasukef.github.io/papers/images/cv/semstyle/semstyle1.png"&gt;&lt;/p&gt;
 &lt;h2&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
-&lt;p&gt;画像とキャプションのPaired dataからスタイルを適用したキャプションを生成する研究は以前からあったが，スタイルが適用されたキャプションのみから構成されるunpaired data(画像を含まない)のみを用いてスタイルを適用したキャプションを画像から生成する研究としては初．&lt;/p&gt;
+&lt;p&gt;画像とキャプションのPaired dataを用いず，キャプションデータのみを用いてスタイルを適用したキャプションを画像から生成する手法を提案.&lt;/p&gt;
 &lt;h2&gt;3. 技術や手法の"キモ"はどこにある？&lt;/h2&gt;
 &lt;p&gt;Term Generator と Language Generatorの階層的構造によってスタイルを適用したキャプションを生成．
 Term Generatorの学習時のみ画像とキャプションから構成されるPaired Dataを用いる．
