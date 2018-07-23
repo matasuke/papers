@@ -21,55 +21,37 @@
 &lt;li&gt;VQA v2.0&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;比較対象&lt;/h3&gt;
-&lt;h3&gt;Descriptive Caption&lt;/h3&gt;
+&lt;h3&gt;Image Captioning&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;CNN+RNN+coco(Show and tellのモデル)&lt;/li&gt;
-&lt;li&gt;StyleNet(Factored LSTMを用いてDescriptive Captionを生成)&lt;/li&gt;
-&lt;li&gt;SemStyle-cocoonly(提案手法でLanguage Generator部分をDescriptive captionのみで学習)&lt;/li&gt;
-&lt;li&gt;SemStyle-coco(提案手法で単語羅列の先頭に&lt;Descriptive&gt;を付与したもの)&lt;/li&gt;
+&lt;li&gt;SCST(SOTAだったモデル)&lt;/li&gt;
+&lt;li&gt;ResNet(提案手法のbottom-up attentionをResNetに置換)&lt;/li&gt;
+&lt;li&gt;up-down(bottom-up and top-down approach)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Styled caption&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;StyleNet(Factored LSTMを用いてStyled Captionを生成)&lt;/li&gt;
-&lt;li&gt;TermRetrieval(Term Generatorによって生成された単語羅列を用いてStyled textのコーパスから文章を引っ張ってきたもの)&lt;/li&gt;
-&lt;li&gt;neural-storyteller&lt;/li&gt;
-&lt;li&gt;JointEmbedding&lt;/li&gt;
-&lt;li&gt;SemStyle(提案手法)&lt;/li&gt;
-&lt;li&gt;SemStyle-unordered(提案手法でTerm Generatorによって生成される単語羅列のランダムにしたもの)&lt;/li&gt;
-&lt;li&gt;SemStyle-words(提案手法でTerm Generatorによって生成される単語羅列にlemmatizationやPos, FrameNetなどを適用しない)&lt;/li&gt;
-&lt;li&gt;SemStyle-lempos(提案手法でTerm Generatorによって生成される単語羅列にFrameNetを適用しない)&lt;/li&gt;
-&lt;li&gt;SemStyle-romanly(提案手法でTerm Generatorをbookcorpusの恋愛小説のみで学習)&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;ResNetはvisual attentionにResNet101を用いて，最終層のconv layerの出力を10*10にリサイズ．
+通常のvisual attentionと同様に，pixel-wiseのfeature vectorに対してattentionを貼る．&lt;/p&gt;
 &lt;h3&gt;評価&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;BLEU, METEOR, CIEDErは高いほど良い，&lt;/li&gt;
-&lt;li&gt;SPICE, CLF, LM, GRULMは小さいほど良い．&lt;/li&gt;
+&lt;li&gt;BLEU, METEOR, ROUGE-L, CIEDErは高いほど良い，&lt;/li&gt;
+&lt;li&gt;SPICEは小さいほど良い．&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="image3" src="https://matasukef.github.io/papers/images/cv/semstyle/semstyle3.png"&gt;
-&lt;img alt="image4" src="https://matasukef.github.io/papers/images/cv/semstyle/semstyle4.png"&gt;&lt;/p&gt;
-&lt;h4&gt;human evaluation&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;(a) 生成されたキャプションがどれほど画像の状況を言い表しているか．&lt;/li&gt;
-&lt;li&gt;(b) 生成されたキャプションがUnrelated, Descriptive, Styledのどれに属するか.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img alt="image6" src="https://matasukef.github.io/papers/images/cv/semstyle/semstyle6.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image5" src="https://matasukef.github.io/papers/images/cv/bottom-up_and_top-down/figure5.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image6" src="https://matasukef.github.io/papers/images/cv/bottom-up_and_top-down/figure6.png"&gt;&lt;/p&gt;
+&lt;p&gt;Image Captioningのタスクでは全ての評価指標において，現SOTAのモデルを上回った．
+VQAのタスクでは，2017 VQA challengeに投稿された全てのモデルを上回る正解率であった．&lt;/p&gt;
 &lt;h2&gt;5. 議論はあるか？&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;(a), (b),(c), (d)は正しく生成されたキャプション．&lt;/li&gt;
-&lt;li&gt;(e), (f)は生成に失敗したキャプション&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img alt="image5" src="https://matasukef.github.io/papers/images/cv/semstyle/semstyle5.png"&gt;&lt;/p&gt;
-&lt;p&gt;生成に成功したキャプションでは，Storyの方がDescriptiveより印象深い単語を使用していることが読み取れる．
-また，過去形や定冠詞の使用，一人称視点からの叙述が見られる．&lt;/p&gt;
-&lt;p&gt;失敗例は文法的には正しいが，常識に反するものが多く見られる．&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image5" src="https://matasukef.github.io/papers/images/cv/bottom-up_and_top-down/figure7.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image5" src="https://matasukef.github.io/papers/images/cv/bottom-up_and_top-down/figure8.png"&gt;&lt;/p&gt;
 &lt;h2&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://www.aclweb.org/anthology/Q/Q17/Q17-1024.pdf"&gt;'Melvin Johnson, Mike Schuster, Quoc V. Le, Maxim Krikun,Yonghui Wu, Zhifeng Chen, Nikhil Thorat, Fernanda Viégas,Martin Wattenberg, Greg Corrado, Macduff Hughes, Jeffrey Dean', "Google’s Multilingual Neural Machine Translation System: Enabling Zero-Shot Translation",'EMNLP 2017'&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2017/06/Generating-Attractive-Visual-Captions-with-Styles.pdf"&gt;'Chuang Gan, Zhe Gan, Xiaodong He,Jianfeng Gao,Li Deng', 'StyleNet: Generating Attractive Visual Captions with Styles', 'CVPR 2017'&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://arxiv.org/pdf/1708.02711.pdf"&gt;'Damien Teney, Peter Anderson, Xiaodong He, Anton van den Hengel', "Tips and Tricks for Visual Question Answering: Learnings from the 2017 Challenge",'2017 VQA Challenge'&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://arxiv.org/pdf/1506.01497.pdf"&gt;'S. Ren, K. He, R. Girshick, and J. Sun', 'Faster R-CNN: Towards real-time object detection with region proposal networks', 'NIPS 2015'&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://arxiv.org/pdf/1704.03162.pdf"&gt;'V. Kazemi and A. Elqursh', 'Show, ask, attend, and answer: A
+strong baseline for visual question answering.'&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;論文情報・リンク&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://arxiv.org/abs/1805.07030"&gt;"Alexander Mathews, Lexing Xie, Xuming He"，"SemStyle: Learning to Generate Stylised Image Captions using Unaligned Text"，"CVPR 2018"，2018&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.panderson.me/images/1707.07998-up-down.pdf"&gt;"Peter Anderson, Xiaodong He, Chris Buehler, Damien Teney, Mark Johnson, Stephen Gould, Lei Zhang"，"Bottom-Up and Top-Down Attention for Image Captioning
+and Visual Question Answering"，"CVPR 2018"，2018&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><category term="IDG"></category><category term="VQA"></category><category term="CVPR2018"></category></entry><entry><title>SemStyle: Learning to Generate Stylised Image Captions using Unaligned Text</title><link href="https://matasukef.github.io/papers/semstyle-learning-to-generate-stylised-image-captions-using-unaligned-text.html" rel="alternate"></link><published>2018-07-02T00:00:00+09:00</published><updated>2018-07-02T00:00:00+09:00</updated><author><name>Kosuke Futamata</name></author><id>tag:matasukef.github.io,2018-07-02:/papers/semstyle-learning-to-generate-stylised-image-captions-using-unaligned-text.html</id><summary type="html"></summary><content type="html">&lt;h2&gt;1. どんなもの？&lt;/h2&gt;
 &lt;p&gt;画像からスタイルを適用したキャプションをUnpaired imagesから生成する研究．
 Term Generatorを用いて画像に関連する単語を生成して，生成された単語列からLanguage Generatornを用いてスタイルを適用したキャプションを生成する．&lt;/p&gt;

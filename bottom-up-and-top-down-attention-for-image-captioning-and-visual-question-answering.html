@@ -99,55 +99,37 @@
 <li>VQA v2.0</li>
 </ul>
 <h3>比較対象</h3>
-<h3>Descriptive Caption</h3>
+<h3>Image Captioning</h3>
 <ul>
-<li>CNN+RNN+coco(Show and tellのモデル)</li>
-<li>StyleNet(Factored LSTMを用いてDescriptive Captionを生成)</li>
-<li>SemStyle-cocoonly(提案手法でLanguage Generator部分をDescriptive captionのみで学習)</li>
-<li>SemStyle-coco(提案手法で単語羅列の先頭に<Descriptive>を付与したもの)</li>
+<li>SCST(SOTAだったモデル)</li>
+<li>ResNet(提案手法のbottom-up attentionをResNetに置換)</li>
+<li>up-down(bottom-up and top-down approach)</li>
 </ul>
-<h3>Styled caption</h3>
-<ul>
-<li>StyleNet(Factored LSTMを用いてStyled Captionを生成)</li>
-<li>TermRetrieval(Term Generatorによって生成された単語羅列を用いてStyled textのコーパスから文章を引っ張ってきたもの)</li>
-<li>neural-storyteller</li>
-<li>JointEmbedding</li>
-<li>SemStyle(提案手法)</li>
-<li>SemStyle-unordered(提案手法でTerm Generatorによって生成される単語羅列のランダムにしたもの)</li>
-<li>SemStyle-words(提案手法でTerm Generatorによって生成される単語羅列にlemmatizationやPos, FrameNetなどを適用しない)</li>
-<li>SemStyle-lempos(提案手法でTerm Generatorによって生成される単語羅列にFrameNetを適用しない)</li>
-<li>SemStyle-romanly(提案手法でTerm Generatorをbookcorpusの恋愛小説のみで学習)</li>
-</ul>
+<p>ResNetはvisual attentionにResNet101を用いて，最終層のconv layerの出力を10*10にリサイズ．
+通常のvisual attentionと同様に，pixel-wiseのfeature vectorに対してattentionを貼る．</p>
 <h3>評価</h3>
 <ul>
-<li>BLEU, METEOR, CIEDErは高いほど良い，</li>
-<li>SPICE, CLF, LM, GRULMは小さいほど良い．</li>
+<li>BLEU, METEOR, ROUGE-L, CIEDErは高いほど良い，</li>
+<li>SPICEは小さいほど良い．</li>
 </ul>
-<p><img alt="image3" src="https://matasukef.github.io/papers/images/cv/semstyle/semstyle3.png">
-<img alt="image4" src="https://matasukef.github.io/papers/images/cv/semstyle/semstyle4.png"></p>
-<h4>human evaluation</h4>
-<ul>
-<li>(a) 生成されたキャプションがどれほど画像の状況を言い表しているか．</li>
-<li>(b) 生成されたキャプションがUnrelated, Descriptive, Styledのどれに属するか.</li>
-</ul>
-<p><img alt="image6" src="https://matasukef.github.io/papers/images/cv/semstyle/semstyle6.png"></p>
+<p><img alt="image5" src="https://matasukef.github.io/papers/images/cv/bottom-up_and_top-down/figure5.png"></p>
+<p><img alt="image6" src="https://matasukef.github.io/papers/images/cv/bottom-up_and_top-down/figure6.png"></p>
+<p>Image Captioningのタスクでは全ての評価指標において，現SOTAのモデルを上回った．
+VQAのタスクでは，2017 VQA challengeに投稿された全てのモデルを上回る正解率であった．</p>
 <h2>5. 議論はあるか？</h2>
-<ul>
-<li>(a), (b),(c), (d)は正しく生成されたキャプション．</li>
-<li>(e), (f)は生成に失敗したキャプション</li>
-</ul>
-<p><img alt="image5" src="https://matasukef.github.io/papers/images/cv/semstyle/semstyle5.png"></p>
-<p>生成に成功したキャプションでは，Storyの方がDescriptiveより印象深い単語を使用していることが読み取れる．
-また，過去形や定冠詞の使用，一人称視点からの叙述が見られる．</p>
-<p>失敗例は文法的には正しいが，常識に反するものが多く見られる．</p>
+<p><img alt="image5" src="https://matasukef.github.io/papers/images/cv/bottom-up_and_top-down/figure7.png"></p>
+<p><img alt="image5" src="https://matasukef.github.io/papers/images/cv/bottom-up_and_top-down/figure8.png"></p>
 <h2>6. 次に読むべき論文はあるか？</h2>
 <ul>
-<li><a href="https://www.aclweb.org/anthology/Q/Q17/Q17-1024.pdf">'Melvin Johnson, Mike Schuster, Quoc V. Le, Maxim Krikun,Yonghui Wu, Zhifeng Chen, Nikhil Thorat, Fernanda Viégas,Martin Wattenberg, Greg Corrado, Macduff Hughes, Jeffrey Dean', "Google’s Multilingual Neural Machine Translation System: Enabling Zero-Shot Translation",'EMNLP 2017'</a></li>
-<li><a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2017/06/Generating-Attractive-Visual-Captions-with-Styles.pdf">'Chuang Gan, Zhe Gan, Xiaodong He,Jianfeng Gao,Li Deng', 'StyleNet: Generating Attractive Visual Captions with Styles', 'CVPR 2017'</a></li>
+<li><a href="https://arxiv.org/pdf/1708.02711.pdf">'Damien Teney, Peter Anderson, Xiaodong He, Anton van den Hengel', "Tips and Tricks for Visual Question Answering: Learnings from the 2017 Challenge",'2017 VQA Challenge'</a></li>
+<li><a href="https://arxiv.org/pdf/1506.01497.pdf">'S. Ren, K. He, R. Girshick, and J. Sun', 'Faster R-CNN: Towards real-time object detection with region proposal networks', 'NIPS 2015'</a></li>
+<li><a href="https://arxiv.org/pdf/1704.03162.pdf">'V. Kazemi and A. Elqursh', 'Show, ask, attend, and answer: A
+strong baseline for visual question answering.'</a></li>
 </ul>
 <h3>論文情報・リンク</h3>
 <ul>
-<li><a href="https://arxiv.org/abs/1805.07030">"Alexander Mathews, Lexing Xie, Xuming He"，"SemStyle: Learning to Generate Stylised Image Captions using Unaligned Text"，"CVPR 2018"，2018</a></li>
+<li><a href="http://www.panderson.me/images/1707.07998-up-down.pdf">"Peter Anderson, Xiaodong He, Chris Buehler, Damien Teney, Mark Johnson, Stephen Gould, Lei Zhang"，"Bottom-Up and Top-Down Attention for Image Captioning
+and Visual Question Answering"，"CVPR 2018"，2018</a></li>
 </ul>
 
 
