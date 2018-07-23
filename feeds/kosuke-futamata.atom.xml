@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Paper Survey - Kosuke Futamata</title><link href="https://matasukef.github.io/papers/" rel="alternate"></link><link href="https://matasukef.github.io/papers/feeds/kosuke-futamata.atom.xml" rel="self"></link><id>https://matasukef.github.io/papers/</id><updated>2018-07-23T00:00:00+09:00</updated><entry><title>Bottom-Up and Top-Down Attention for Image Captioning and Visual Question Answering</title><link href="https://matasukef.github.io/papers/bottom-up-and-top-down-attention-for-image-captioning-and-visual-question-answering.html" rel="alternate"></link><published>2018-07-23T00:00:00+09:00</published><updated>2018-07-23T00:00:00+09:00</updated><author><name>Kosuke Futamata</name></author><id>tag:matasukef.github.io,2018-07-23:/papers/bottom-up-and-top-down-attention-for-image-captioning-and-visual-question-answering.html</id><summary type="html"></summary><content type="html">&lt;h2&gt;1. どんなもの？&lt;/h2&gt;
 &lt;p&gt;物体検出によるbottom-up attentionと重み付き平均を用いたtop-down attentionの両方を組み合わせることにより，Image CaptioningとVisual Question Answeringの両方のタスクにおいてSOTAを達成．&lt;/p&gt;
-&lt;p&gt;&lt;img alt="image1" src="https://matasukef.github.io/papers/images/cv/bottom-up_and_top-down/figure1.png"&gt;&lt;/p&gt;
+&lt;p&gt;![image1]({filename}/images/cv/bottom-up_and_top-down/figure1.png =200x)&lt;/p&gt;
 &lt;h2&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
 &lt;p&gt;従来のImage captioningやVideo Question Answeringのタスクではほとんどの場合，逐次生成されるキャプションの結果や質問と画像のpixel wise feature vectorによる重み付き平均によるtop-down型のvisual attentionを用いる．
 一方で本研究では，画像のpixel wise feature vectoreではなく，Faster R-CNNなどの物体検出アルゴリズムを用いたbottom-up attentionの出力結果に対してtop-down attentionを適用している．&lt;/p&gt;
@@ -9,7 +9,7 @@
 &lt;p&gt;bottom-up attentionの出力結果をtop-down attentionに適用している．
 物体検出アルゴリズムとして知られるFaster R-CNNの出力結果である部分画像に対してmean-pooled convolutionを適用したfeature vectoresに対してattentionを貼る．
 さらに，これらfeature vectoresの平均を取ったのをNetworkの入力として用いる．&lt;/p&gt;
-&lt;p&gt;&lt;img alt="image2" src="https://matasukef.github.io/papers/images/cv/bottom-up_and_top-down/figure2.png"&gt;&lt;/p&gt;
+&lt;p&gt;![image2]({filename}/images/cv/bottom-up_and_top-down/figure2.png = 200x)&lt;/p&gt;
 &lt;p&gt;bottom-up attentionを用いる以外はImage Captioning及びVisual Question AnsweringのNetworksに変わった構造は見られない．&lt;/p&gt;
 &lt;p&gt;&lt;img alt="image2" src="https://matasukef.github.io/papers/images/cv/bottom-up_and_top-down/figure3.png"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img alt="image2" src="https://matasukef.github.io/papers/images/cv/bottom-up_and_top-down/figure4.png"&gt;&lt;/p&gt;

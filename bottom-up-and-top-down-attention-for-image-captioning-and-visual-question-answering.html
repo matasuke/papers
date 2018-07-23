@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="1. どんなもの？ 物体検出によるbottom-up attentionと重み付き平均を用いたtop-down attentionの両方を組み合わせることにより，Image CaptioningとVisual Question Answeringの両方のタスクにおいてSOTAを達成． 2. 先行研究と比べてどこがすごいの？ 従来のImage captioningやVideo...">
+        <meta name="description" content="1. どんなもの？ 物体検出によるbottom-up attentionと重み付き平均を用いたtop-down attentionの両方を組み合わせることにより，Image CaptioningとVisual Question Answeringの両方のタスクにおいてSOTAを達成．...">
         <meta name="keywords" content="CVPR2018, IDG, VQA">
         <link rel="icon" href="https://matasukef.github.io/papers/favicon.ico">
 
@@ -79,7 +79,7 @@
     <div class="container content">
         <h2>1. どんなもの？</h2>
 <p>物体検出によるbottom-up attentionと重み付き平均を用いたtop-down attentionの両方を組み合わせることにより，Image CaptioningとVisual Question Answeringの両方のタスクにおいてSOTAを達成．</p>
-<p><img alt="image1" src="https://matasukef.github.io/papers/images/cv/bottom-up_and_top-down/figure1.png"></p>
+<p>![image1]({filename}/images/cv/bottom-up_and_top-down/figure1.png =200x)</p>
 <h2>2. 先行研究と比べてどこがすごいの？</h2>
 <p>従来のImage captioningやVideo Question Answeringのタスクではほとんどの場合，逐次生成されるキャプションの結果や質問と画像のpixel wise feature vectorによる重み付き平均によるtop-down型のvisual attentionを用いる．
 一方で本研究では，画像のpixel wise feature vectoreではなく，Faster R-CNNなどの物体検出アルゴリズムを用いたbottom-up attentionの出力結果に対してtop-down attentionを適用している．</p>
@@ -87,7 +87,7 @@
 <p>bottom-up attentionの出力結果をtop-down attentionに適用している．
 物体検出アルゴリズムとして知られるFaster R-CNNの出力結果である部分画像に対してmean-pooled convolutionを適用したfeature vectoresに対してattentionを貼る．
 さらに，これらfeature vectoresの平均を取ったのをNetworkの入力として用いる．</p>
-<p><img alt="image2" src="https://matasukef.github.io/papers/images/cv/bottom-up_and_top-down/figure2.png"></p>
+<p>![image2]({filename}/images/cv/bottom-up_and_top-down/figure2.png = 200x)</p>
 <p>bottom-up attentionを用いる以外はImage Captioning及びVisual Question AnsweringのNetworksに変わった構造は見られない．</p>
 <p><img alt="image2" src="https://matasukef.github.io/papers/images/cv/bottom-up_and_top-down/figure3.png"></p>
 <p><img alt="image2" src="https://matasukef.github.io/papers/images/cv/bottom-up_and_top-down/figure4.png"></p>
