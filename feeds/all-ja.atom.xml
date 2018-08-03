@@ -1,5 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Paper Survey</title><link href="https://matasukef.github.io/papers/" rel="alternate"></link><link href="https://matasukef.github.io/papers/feeds/all-ja.atom.xml" rel="self"></link><id>https://matasukef.github.io/papers/</id><updated>2018-07-26T00:00:00+09:00</updated><entry><title>Rich Image Captioning in the Wild</title><link href="https://matasukef.github.io/papers/rich-image-captioning-in-the-wild.html" rel="alternate"></link><published>2018-07-26T00:00:00+09:00</published><updated>2018-07-26T00:00:00+09:00</updated><author><name>Kosuke Futamata</name></author><id>tag:matasukef.github.io,2018-07-26:/papers/rich-image-captioning-in-the-wild.html</id><summary type="html"></summary><content type="html">&lt;h2&gt;1. どんなもの？&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Paper Survey</title><link href="https://matasukef.github.io/papers/" rel="alternate"></link><link href="https://matasukef.github.io/papers/feeds/all-ja.atom.xml" rel="self"></link><id>https://matasukef.github.io/papers/</id><updated>2018-08-02T00:00:00+09:00</updated><entry><title>Stacked Attention Networks for Image Question Answering</title><link href="https://matasukef.github.io/papers/stacked-attention-networks-for-image-question-answering.html" rel="alternate"></link><published>2018-08-02T00:00:00+09:00</published><updated>2018-08-02T00:00:00+09:00</updated><author><name>Kosuke Futamata</name></author><id>tag:matasukef.github.io,2018-08-02:/papers/stacked-attention-networks-for-image-question-answering.html</id><summary type="html"></summary><content type="html">&lt;h2&gt;1. どんなもの？&lt;/h2&gt;
+&lt;p&gt;Visual Question Answerigに用いられるStacked Attention networkを提案。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image1" src="https://matasukef.github.io/papers/images/cv/stacked-attention-network/figure1.png"&gt;&lt;/p&gt;
+&lt;h2&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
+&lt;p&gt;本論文で提案しているStacked Attention Mechanismを用いることで、VQAのタスクにおいてSOTAを達成。
+また、本論文の投稿時にはAttention mechanismをVQAのタスクに適用したものとしては初。&lt;/p&gt;
+&lt;h2&gt;3. 技術や手法の"キモ"はどこにある？&lt;/h2&gt;
+&lt;p&gt;Stacked attention mechanismによって画像内の物体と質問文のアライメントを行う。
+Attentionをスタック構造にすることによって画像内の物体への注意がよりシャープになるため、より特定の物体に注意を向けることが容易になっている。&lt;/p&gt;
+&lt;p&gt;ネットワークの構造は主に３つに分解される。
+1つ目はImage model, 2つ目はQuestion Model,そして3つ目がStacked Attention Networksである。
+Image modelはVGGNetを用いて画像の特徴量を抽出するのに用いられる。
+Question modelはLSTMまたはCNNを用いてQuestionをEncodeする。&lt;/p&gt;
+&lt;p&gt;Stacked Sttention Networksは画像特徴量と質問文の特徴量を用いて画像に対するAttentionを得る。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://matasukef.github.io/papers/images/cv/stacked-attention-network/figure3.png" alt="image1" title="image1" width="200" height="50"&gt;
+&lt;img src="https://matasukef.github.io/papers/images/cv/stacked-attention-network/figure4.png" alt="image1" title="image1" width="200" height="50"&gt;
+&lt;img src="https://matasukef.github.io/papers/images/cv/stacked-attention-network/figure5.png" alt="image1" title="image1" width="200" height="50"&gt;
+&lt;img src="https://matasukef.github.io/papers/images/cv/stacked-attention-network/figure6.png" alt="image1" title="image1" width="200" height="50"&gt;
+&lt;img src="https://matasukef.github.io/papers/images/cv/stacked-attention-network/figure7.png" alt="image1" title="image1" width="200" height="50"&gt;&lt;/p&gt;
+&lt;h2&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
+&lt;h3&gt;データセット&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;DAQUAR-ALL&lt;/li&gt;
+&lt;li&gt;DAQUAR-REDUCED&lt;/li&gt;
+&lt;li&gt;COCO-QA&lt;/li&gt;
+&lt;li&gt;VQA&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;評価&lt;/h3&gt;
+&lt;p&gt;&lt;img src="https://matasukef.github.io/papers/images/cv/stacked-attention-network/figure8.png" alt="image1" title="image1" width="200" height="200"&gt;
+&lt;img src="https://matasukef.github.io/papers/images/cv/stacked-attention-network/figure9.png" alt="image1" title="image1" width="200" height="200"&gt;
+&lt;img src="https://matasukef.github.io/papers/images/cv/stacked-attention-network/figure10.png" alt="image1" title="image1" width="200" height="200"&gt;
+&lt;img src="https://matasukef.github.io/papers/images/cv/stacked-attention-network/figure11.png" alt="image1" title="image1" width="200" height="200"&gt;&lt;/p&gt;
+&lt;p&gt;人間を除く全ての比較対象と比べ提案手法が一番精度が良かった。&lt;/p&gt;
+&lt;h2&gt;5. 議論はあるか？&lt;/h2&gt;
+&lt;p&gt;image captioningやmultimoda NMTの領域にstacked attentionを適用するのも良さそう。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://matasukef.github.io/papers/images/cv/stacked-attention-network/figure14.png" alt="image1" title="image1" width="200" height="200"&gt;&lt;/p&gt;
+&lt;p&gt;解答に失敗した例を見るとほとんどの場合、質問文に対するvisual attentionの画像内領域は正しい。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://matasukef.github.io/papers/images/cv/stacked-attention-network/figure15.png" alt="image1" title="image1" width="200" height="200"&gt;&lt;/p&gt;
+&lt;h3&gt;論文情報・リンク&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://arxiv.org/pdf/1511.02274.pdf"&gt;"Zichao Yang, Xiaodong He, Jianfeng Gao, Li Deng, Alex Smola"，"Stacked Attention Networks for Image Question Answering"，"CoRR"，2015&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="VQA"></category></entry><entry><title>Rich Image Captioning in the Wild</title><link href="https://matasukef.github.io/papers/rich-image-captioning-in-the-wild.html" rel="alternate"></link><published>2018-07-26T00:00:00+09:00</published><updated>2018-07-26T00:00:00+09:00</updated><author><name>Kosuke Futamata</name></author><id>tag:matasukef.github.io,2018-07-26:/papers/rich-image-captioning-in-the-wild.html</id><summary type="html"></summary><content type="html">&lt;h2&gt;1. どんなもの？&lt;/h2&gt;
 &lt;p&gt;画像に映る様々なvisual conceptsを含む表現豊かなキャプションを生成する研究。
 近年のimage captioningに関する研究はend-to-endが主であるが、この論文ではいくつかのモジュールから構成されるcompositional modelである。
 人手の評価を用いてcompositional modelにおいてSOTAを達成。&lt;/p&gt;
