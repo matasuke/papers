@@ -1,5 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Paper Survey</title><link href="https://matasukef.github.io/papers/" rel="alternate"></link><link href="https://matasukef.github.io/papers/feeds/all.atom.xml" rel="self"></link><id>https://matasukef.github.io/papers/</id><updated>2018-07-23T00:00:00+09:00</updated><entry><title>Bottom-Up and Top-Down Attention for Image Captioning and Visual Question Answering</title><link href="https://matasukef.github.io/papers/bottom-up-and-top-down-attention-for-image-captioning-and-visual-question-answering.html" rel="alternate"></link><published>2018-07-23T00:00:00+09:00</published><updated>2018-07-23T00:00:00+09:00</updated><author><name>Kosuke Futamata</name></author><id>tag:matasukef.github.io,2018-07-23:/papers/bottom-up-and-top-down-attention-for-image-captioning-and-visual-question-answering.html</id><summary type="html"></summary><content type="html">&lt;h2&gt;1. どんなもの？&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Paper Survey</title><link href="https://matasukef.github.io/papers/" rel="alternate"></link><link href="https://matasukef.github.io/papers/feeds/all.atom.xml" rel="self"></link><id>https://matasukef.github.io/papers/</id><updated>2018-07-26T00:00:00+09:00</updated><entry><title>Rich Image Captioning in the Wild</title><link href="https://matasukef.github.io/papers/rich-image-captioning-in-the-wild.html" rel="alternate"></link><published>2018-07-26T00:00:00+09:00</published><updated>2018-07-26T00:00:00+09:00</updated><author><name>Kosuke Futamata</name></author><id>tag:matasukef.github.io,2018-07-26:/papers/rich-image-captioning-in-the-wild.html</id><summary type="html"></summary><content type="html">&lt;h2&gt;1. どんなもの？&lt;/h2&gt;
+&lt;p&gt;画像に映る様々なvisual conceptsを含む表現豊かなキャプションを生成する研究。
+近年のimage captioningに関する研究はend-to-endが主であるが、この論文ではいくつかのモジュールから構成されるcompositional modelである。
+人手の評価を用いてcompositional modelにおいてSOTAを達成。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image1" src="https://matasukef.github.io/papers/images/cv/rich-image-captioning/figure1.png"&gt;&lt;/p&gt;
+&lt;p&gt;上記の画像の例では、物体研究を用いることでcelebritiesとlandmarksをキャプションの結果に反映させた例である。&lt;/p&gt;
+&lt;h2&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
+&lt;p&gt;近年のimage captioningに関する研究では主にend-to-endによるMSCOCO captioning datasetやfliker datasetのみを用いる傾向にある。
+したがって、open-domainな画像に対して強健なモデルとは言い難い。
+また、モデルの評価時にBleu, spice, Ciderなどの指標を用いるが、これらの指標は人手の評価との相関が低い。&lt;/p&gt;
+&lt;p&gt;この研究では、画像に描画されるvisual conceptsを生成されるキャプションに組み込むことによって表現豊かなcaptioningを行う。
+End-to-Endモデルとの比較は行われていないものの、従来のcompositional modelよりキャプションの精度が良かった。&lt;/p&gt;
+&lt;h2&gt;3. 技術や手法の"キモ"はどこにある？&lt;/h2&gt;
+&lt;p&gt;様々なモジュールの組み合わせることによってimage captioningを行っている。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image2" src="https://matasukef.github.io/papers/images/cv/rich-image-captioning/figure2.png"&gt;&lt;/p&gt;
+&lt;p&gt;CNNベースの分類器を用いて物体の検出(Visual concepts, Celebrity, Landmark)を行い、maximum entropy language model(MELM)によりキャプションを生成する。
+また、Deep multimodal similarity model(DMSM)により、input imageのCNNを適用した後の特徴量とMELMにより生成されたキャプションを同一の意味空間上に落とし込む。
+DMSMにより、画像とキャプションのcosin距離を計算し、キャプションの信頼性のscoreとして用いる。
+Confidence modelは単純なロジスティク回帰モデルである。
+DMSMのscore, MELMのscore, caption lengthなどを特徴量として用いる。
+confidenc modelの確率が高いキャプションはそのまま出力し、低い場合は
+"This image contains XXX, YYY, ZZZ"のよう物体検出の結果を出力する。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image2" src="https://matasukef.github.io/papers/images/cv/rich-image-captioning/figure3.png"&gt;&lt;/p&gt;
+&lt;h2&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
+&lt;h3&gt;データセット&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;MSCOCO&lt;/li&gt;
+&lt;li&gt;MIT Dataset&lt;/li&gt;
+&lt;li&gt;images on imstagram sampled randomly&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;比較対象&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fang et al(SOTAだったモデル)&lt;/li&gt;
+&lt;li&gt;Basic(confidence model, 物体検出なし)&lt;/li&gt;
+&lt;li&gt;Basic+Confi(物体検出なし)&lt;/li&gt;
+&lt;li&gt;Full(提案手法)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;評価&lt;/h3&gt;
+&lt;p&gt;人手の評価を行った。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image2" src="https://matasukef.github.io/papers/images/cv/rich-image-captioning/figure4.png"&gt;&lt;/p&gt;
+&lt;p&gt;compositional modelの従来のSOTAであったモデルよりキャプションの精度が良かった。&lt;/p&gt;
+&lt;h2&gt;5. 議論はあるか？&lt;/h2&gt;
+&lt;p&gt;Bleuなどの評価指標を用いた実験を行っていないため、他のEnd-to-Endモデルとの比較ができない。
+instagram上のopen-domainな画像に対してはExcellent及びGoodと判断されたキャプションが全体の50%であった。&lt;/p&gt;
+&lt;p&gt;Confidence scoreが低い時に物体検出の結果を出力するのはどうかと思った。
+物体検出の結果を出力すれば、Goodの割合が必然的に増加するのではないかと考えられる。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image2" src="https://matasukef.github.io/papers/images/cv/rich-image-captioning/figure5.png"&gt;&lt;/p&gt;
+&lt;h2&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://arxiv.org/pdf/1411.4952.pdf"&gt;'Hao Fang, Saurabh Gupta, Forrest Iandola, Rupesh Srivastava, Li Deng, Piotr Dollár, Jianfeng Gao, Xiaodong He, Margaret Mitchell, John C. Platt, C. Lawrence Zitnick, Geoffrey Zweig', "From Captions to Visual Concepts and Back",'CVPR 2015',2014&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;論文情報・リンク&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://arxiv.org/pdf/1603.09016.pdf"&gt;"Kenneth Tran, Xiaodong He, Lei Zhang, Jian Sun, Cornelia Carapcea, Chris Thrasher, Chris Buehler, Chris Sienkiewicz"，"Rich Image Captioning in the Wild"，"CVPR 2018"，2018&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="IDG"></category><category term="CVPR2018"></category></entry><entry><title>Bottom-Up and Top-Down Attention for Image Captioning and Visual Question Answering</title><link href="https://matasukef.github.io/papers/bottom-up-and-top-down-attention-for-image-captioning-and-visual-question-answering.html" rel="alternate"></link><published>2018-07-23T00:00:00+09:00</published><updated>2018-07-23T00:00:00+09:00</updated><author><name>Kosuke Futamata</name></author><id>tag:matasukef.github.io,2018-07-23:/papers/bottom-up-and-top-down-attention-for-image-captioning-and-visual-question-answering.html</id><summary type="html"></summary><content type="html">&lt;h2&gt;1. どんなもの？&lt;/h2&gt;
 &lt;p&gt;物体検出によるbottom-up attentionと重み付き平均を用いたtop-down attentionの両方を組み合わせることにより，Image CaptioningとVisual Question Answeringの両方のタスクにおいてSOTAを達成．&lt;/p&gt;
 &lt;p&gt;&lt;img alt="image1" src="https://matasukef.github.io/papers/images/cv/bottom-up_and_top-down/figure1.png"&gt;&lt;/p&gt;
 &lt;h2&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
