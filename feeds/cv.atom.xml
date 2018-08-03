@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Paper Survey - CV</title><link href="https://matasukef.github.io/papers/" rel="alternate"></link><link href="https://matasukef.github.io/papers/feeds/cv.atom.xml" rel="self"></link><id>https://matasukef.github.io/papers/</id><updated>2018-08-02T00:00:00+09:00</updated><entry><title>Stacked Attention Networks for Image Question Answering</title><link href="https://matasukef.github.io/papers/stacked-attention-networks-for-image-question-answering.html" rel="alternate"></link><published>2018-08-02T00:00:00+09:00</published><updated>2018-08-02T00:00:00+09:00</updated><author><name>Kosuke Futamata</name></author><id>tag:matasukef.github.io,2018-08-02:/papers/stacked-attention-networks-for-image-question-answering.html</id><summary type="html"></summary><content type="html">&lt;h2&gt;1. どんなもの？&lt;/h2&gt;
 &lt;p&gt;Visual Question Answerigに用いられるStacked Attention networkを提案。&lt;/p&gt;
-&lt;p&gt;&lt;img alt="image1" src="https://matasukef.github.io/papers/images/cv/stacked-attention-network/figure1.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://matasukef.github.io/papers/images/cv/stacked-attention-network/figure1.png" alt="image1" title="image1" width="100" height="100"&gt;&lt;/p&gt;
 &lt;h2&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
 &lt;p&gt;本論文で提案しているStacked Attention Mechanismを用いることで、VQAのタスクにおいてSOTAを達成。
 また、本論文の投稿時にはAttention mechanismをVQAのタスクに適用したものとしては初。&lt;/p&gt;
@@ -13,7 +13,7 @@ Attentionをスタック構造にすることによって画像内の物体へ�
 Image modelはVGGNetを用いて画像の特徴量を抽出するのに用いられる。
 Question modelはLSTMまたはCNNを用いてQuestionをEncodeする。&lt;/p&gt;
 &lt;p&gt;Stacked Sttention Networksは画像特徴量と質問文の特徴量を用いて画像に対するAttentionを得る。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://matasukef.github.io/papers/images/cv/stacked-attention-network/figure3.png" alt="image1" title="image1" width="200" height="50"&gt;
+&lt;p&gt;&lt;img src="https://matasukef.github.io/papers/images/cv/stacked-attention-network/figure3.png" alt="image1" title="image1" width="100" height="50"&gt;
 &lt;img src="https://matasukef.github.io/papers/images/cv/stacked-attention-network/figure4.png" alt="image1" title="image1" width="200" height="50"&gt;
 &lt;img src="https://matasukef.github.io/papers/images/cv/stacked-attention-network/figure5.png" alt="image1" title="image1" width="200" height="50"&gt;
 &lt;img src="https://matasukef.github.io/papers/images/cv/stacked-attention-network/figure6.png" alt="image1" title="image1" width="200" height="50"&gt;
