@@ -96,6 +96,7 @@
 <p>基本のモデルはEncoer側にCNN, Decoder側にRNNを用いたseq2seqだが、decoderのRNNにLSTM cellを３つに分解したFactored LSTMを使用。
 Factored LSTM cellは従来のLSTM cellのパラメーターを分解(<span class="math">\(W_x = U_xS_xV_x\)</span>)したものである。
 したがって、Factored LSTMのcellは以下のようになる。</p>
+<p><span class="math">\(W_x = U_xS_xV_x\)</span></p>
 <p>$i_t = sigmoid(U_{ix}S_{ix}V_{ix}x_t + W_{ih}h_{t-1}) $ \
 $f_t = sigmoid(U_{fx}S_{fx}V_{fx}x_t + W_{fh}h_{t-1}) $ \
 $o_t = sigmoid(U_{ox}S_{ox}V_{ox}x_t + W_{oh}h_{t-1}) $ \

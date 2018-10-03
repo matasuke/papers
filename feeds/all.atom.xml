@@ -248,6 +248,7 @@ Bi-directionalのGRUにAttentionを適用したEncoder-Decoder構造を取って
 &lt;p&gt;基本のモデルはEncoer側にCNN, Decoder側にRNNを用いたseq2seqだが、decoderのRNNにLSTM cellを３つに分解したFactored LSTMを使用。
 Factored LSTM cellは従来のLSTM cellのパラメーターを分解(&lt;span class="math"&gt;\(W_x = U_xS_xV_x\)&lt;/span&gt;)したものである。
 したがって、Factored LSTMのcellは以下のようになる。&lt;/p&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(W_x = U_xS_xV_x\)&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;$i_t = sigmoid(U_{ix}S_{ix}V_{ix}x_t + W_{ih}h_{t-1}) $ \
 $f_t = sigmoid(U_{fx}S_{fx}V_{fx}x_t + W_{fh}h_{t-1}) $ \
 $o_t = sigmoid(U_{ox}S_{ox}V_{ox}x_t + W_{oh}h_{t-1}) $ \
