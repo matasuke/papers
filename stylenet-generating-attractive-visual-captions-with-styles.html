@@ -87,7 +87,7 @@
 <li>Rは恋愛小説のスタイルを含むキャプション</li>
 <li>Hはユーモアのスタイルを含むキャプション</li>
 </ul>
-<p><img width="1271" alt="factored_lstm2.png" src="stylenet/stylenet2.png"></p>
+<p><img width="1271" alt="{filename}/images/cv/stylenet/factored_lstm2.png" src="stylenet/stylenet2.png"></p>
 <h2>2. 先行研究と比べてどこがすごいの？</h2>
 <p>先行研究ではpaired dataによるfactualなcaption生成が主流であったが、
 本研究ではMSCOCOなどのpaired dataと適用したいスタイルを含むunpairedなdata(文章の集合)を用いることによって、
@@ -96,19 +96,17 @@
 <p>基本のモデルはEncoer側にCNN, Decoder側にRNNを用いたseq2seqだが、decoderのRNNにLSTM cellを３つに分解したFactored LSTMを使用。
 Factored LSTM cellは従来のLSTM cellのパラメーターを分解($W_x = U_xS_xV_x$)したものである。
 したがって、Factored LSTMのcellは以下のようになる。</p>
-<div class="highlight"><pre><span></span>\begin{align}
-i_t = sigmoid(U_{ix}S_{ix}V_{ix}x_t + W_{ih}h_{t-1}) \\
+<div class="highlight"><pre><span></span>i_t = sigmoid(U_{ix}S_{ix}V_{ix}x_t + W_{ih}h_{t-1}) \\
 f_t = sigmoid(U_{fx}S_{fx}V_{fx}x_t + W_{fh}h_{t-1}) \\
 o_t = sigmoid(U_{ox}S_{ox}V_{ox}x_t + W_{oh}h_{t-1}) \\
 \bar{c}_t = tanh(U_{cx}S_{cx}V_{cx}x_t + W_{ch}h_{t-1}) \\
 c_t = f_t \odot c_{t-1} + i_t \odot \bar{c}_t \\
 c_t = o_t \odot c_t
-\end{align}
 </pre></div>
 
 
 <p>t番目のステップのtokenに対してのみ、分解した全パラメータを用い、t-1番目の状態である$h_t-1$に対しては$W_h$を用いる。
-<img width="1271" alt="factored_lstm.png" src="stylenet/stylenet1.png"></p>
+<img width="1271" alt="{filename}/images/cv/stylenet/factored_lstm.png" src="stylenet/stylenet1.png"></p>
 <p>また、学習時にはFacturalなcaption生成用のDecoderとスタイルを適用したcaption生成用のDecoderを1 poech毎に切り替えたmulti task learningを行う。
 Factored LSTMのパラメータSのみを入れ替えつつfacturel captionとstyled captionの生成を行うため、contextに関する情報がU, Vに学習され、Sにstyleが学習されると想定される。</p>
 <h2>4. どうやって有効だと検証した？</h2>
