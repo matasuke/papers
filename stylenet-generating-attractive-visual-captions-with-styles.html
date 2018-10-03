@@ -87,31 +87,33 @@
 <li>Rは恋愛小説のスタイルを含むキャプション</li>
 <li>Hはユーモアのスタイルを含むキャプション</li>
 </ul>
-<p><img width="1271" alt="{filename}/images/cv/stylenet/factored_lstm2.png" src="stylenet/stylenet2.png"></p>
+<p><img width="1271" alt="{filename}/images/cv/stylenet/stylenet2.png" src="stylenet/stylenet2.png"></p>
 <h2>2. 先行研究と比べてどこがすごいの？</h2>
 <p>先行研究ではpaired dataによるfactualなcaption生成が主流であったが、
 本研究ではMSCOCOなどのpaired dataと適用したいスタイルを含むunpairedなdata(文章の集合)を用いることによって、
 スタイルを適用したキャプションを生成することを可能にした。</p>
 <h2>3. 技術や手法の"キモ"はどこにある？</h2>
 <p>基本のモデルはEncoer側にCNN, Decoder側にRNNを用いたseq2seqだが、decoderのRNNにLSTM cellを３つに分解したFactored LSTMを使用。
-Factored LSTM cellは従来のLSTM cellのパラメーターを分解($W_x = U_xS_xV_x$)したものである。
+Factored LSTM cellは従来のLSTM cellのパラメーターを分解(<span class="math">\(W_x = U_xS_xV_x\)</span>)したものである。
 したがって、Factored LSTMのcellは以下のようになる。</p>
-<div class="highlight"><pre><span></span>i_t = sigmoid(U_{ix}S_{ix}V_{ix}x_t + W_{ih}h_{t-1}) \\
+<div class="highlight"><pre><span></span>\begin{align}
+i_t = sigmoid(U_{ix}S_{ix}V_{ix}x_t + W_{ih}h_{t-1}) \\
 f_t = sigmoid(U_{fx}S_{fx}V_{fx}x_t + W_{fh}h_{t-1}) \\
 o_t = sigmoid(U_{ox}S_{ox}V_{ox}x_t + W_{oh}h_{t-1}) \\
 \bar{c}_t = tanh(U_{cx}S_{cx}V_{cx}x_t + W_{ch}h_{t-1}) \\
 c_t = f_t \odot c_{t-1} + i_t \odot \bar{c}_t \\
 c_t = o_t \odot c_t
+\end{align}
 </pre></div>
 
 
-<p>t番目のステップのtokenに対してのみ、分解した全パラメータを用い、t-1番目の状態である$h_t-1$に対しては$W_h$を用いる。
-<img width="1271" alt="{filename}/images/cv/stylenet/factored_lstm.png" src="stylenet/stylenet1.png"></p>
+<p>t番目のステップのtokenに対してのみ、分解した全パラメータを用い、t-1番目の状態である<span class="math">\(h_t-1\)</span>に対しては<span class="math">\(W_h\)</span>を用いる。
+<img width="1271" alt="{filename}/images/cv/stylenet/stylenet1.png" src="stylenet/stylenet1.png"></p>
 <p>また、学習時にはFacturalなcaption生成用のDecoderとスタイルを適用したcaption生成用のDecoderを1 poech毎に切り替えたmulti task learningを行う。
 Factored LSTMのパラメータSのみを入れ替えつつfacturel captionとstyled captionの生成を行うため、contextに関する情報がU, Vに学習され、Sにstyleが学習されると想定される。</p>
 <h2>4. どうやって有効だと検証した？</h2>
 <h2>5. 議論はあるか？</h2>
-<p>Facored LSTMによってパラメータ$S_x$に対してのみスタイルを適用するメカニズムがいまいち謎。
+<p>Facored LSTMによってパラメータ<span class="math">\(S_x\)</span>に対してのみスタイルを適用するメカニズムがいまいち謎。
 全体的にお気持論文な傾向がある。。。
 CNNベースでスタイルを適用したcaption生成が可能なら、RNNを用いて文章のStyle transferに応用できるのでは？</p>
 <h2>6. 次に読むべき論文はあるか？</h2>
@@ -119,6 +121,61 @@ CNNベースでスタイルを適用したcaption生成が可能なら、RNNを�
 <ul>
 <li><a href="https://www.microsoft.com/en-us/research/uploads/prod/2017/06/Generating-Attractive-Visual-Captions-with-Styles.pdf">Chuang Gan, Zhe Gan, Xiaodong He, Jianfeng Gao, Li Deng, StyleNet: Generating Attractive Visual Captions with Styles, CVPR, 2016</a></li>
 </ul>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
 
 
         

@@ -9,35 +9,92 @@
 &lt;li&gt;Rは恋愛小説のスタイルを含むキャプション&lt;/li&gt;
 &lt;li&gt;Hはユーモアのスタイルを含むキャプション&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img width="1271" alt="{filename}/images/cv/stylenet/factored_lstm2.png" src="stylenet/stylenet2.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img width="1271" alt="{filename}/images/cv/stylenet/stylenet2.png" src="stylenet/stylenet2.png"&gt;&lt;/p&gt;
 &lt;h2&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
 &lt;p&gt;先行研究ではpaired dataによるfactualなcaption生成が主流であったが、
 本研究ではMSCOCOなどのpaired dataと適用したいスタイルを含むunpairedなdata(文章の集合)を用いることによって、
 スタイルを適用したキャプションを生成することを可能にした。&lt;/p&gt;
 &lt;h2&gt;3. 技術や手法の"キモ"はどこにある？&lt;/h2&gt;
 &lt;p&gt;基本のモデルはEncoer側にCNN, Decoder側にRNNを用いたseq2seqだが、decoderのRNNにLSTM cellを３つに分解したFactored LSTMを使用。
-Factored LSTM cellは従来のLSTM cellのパラメーターを分解($W_x = U_xS_xV_x$)したものである。
+Factored LSTM cellは従来のLSTM cellのパラメーターを分解(&lt;span class="math"&gt;\(W_x = U_xS_xV_x\)&lt;/span&gt;)したものである。
 したがって、Factored LSTMのcellは以下のようになる。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;i_t = sigmoid(U_{ix}S_{ix}V_{ix}x_t + W_{ih}h_{t-1}) \\
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;\begin{align}
+i_t = sigmoid(U_{ix}S_{ix}V_{ix}x_t + W_{ih}h_{t-1}) \\
 f_t = sigmoid(U_{fx}S_{fx}V_{fx}x_t + W_{fh}h_{t-1}) \\
 o_t = sigmoid(U_{ox}S_{ox}V_{ox}x_t + W_{oh}h_{t-1}) \\
 \bar{c}_t = tanh(U_{cx}S_{cx}V_{cx}x_t + W_{ch}h_{t-1}) \\
 c_t = f_t \odot c_{t-1} + i_t \odot \bar{c}_t \\
 c_t = o_t \odot c_t
+\end{align}
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;t番目のステップのtokenに対してのみ、分解した全パラメータを用い、t-1番目の状態である$h_t-1$に対しては$W_h$を用いる。
-&lt;img width="1271" alt="{filename}/images/cv/stylenet/factored_lstm.png" src="stylenet/stylenet1.png"&gt;&lt;/p&gt;
+&lt;p&gt;t番目のステップのtokenに対してのみ、分解した全パラメータを用い、t-1番目の状態である&lt;span class="math"&gt;\(h_t-1\)&lt;/span&gt;に対しては&lt;span class="math"&gt;\(W_h\)&lt;/span&gt;を用いる。
+&lt;img width="1271" alt="{filename}/images/cv/stylenet/stylenet1.png" src="stylenet/stylenet1.png"&gt;&lt;/p&gt;
 &lt;p&gt;また、学習時にはFacturalなcaption生成用のDecoderとスタイルを適用したcaption生成用のDecoderを1 poech毎に切り替えたmulti task learningを行う。
 Factored LSTMのパラメータSのみを入れ替えつつfacturel captionとstyled captionの生成を行うため、contextに関する情報がU, Vに学習され、Sにstyleが学習されると想定される。&lt;/p&gt;
 &lt;h2&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
 &lt;h2&gt;5. 議論はあるか？&lt;/h2&gt;
-&lt;p&gt;Facored LSTMによってパラメータ$S_x$に対してのみスタイルを適用するメカニズムがいまいち謎。
+&lt;p&gt;Facored LSTMによってパラメータ&lt;span class="math"&gt;\(S_x\)&lt;/span&gt;に対してのみスタイルを適用するメカニズムがいまいち謎。
 全体的にお気持論文な傾向がある。。。
 CNNベースでスタイルを適用したcaption生成が可能なら、RNNを用いて文章のStyle transferに応用できるのでは？&lt;/p&gt;
 &lt;h2&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
 &lt;h3&gt;論文情報・リンク&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://www.microsoft.com/en-us/research/uploads/prod/2017/06/Generating-Attractive-Visual-Captions-with-Styles.pdf"&gt;Chuang Gan, Zhe Gan, Xiaodong He, Jianfeng Gao, Li Deng, StyleNet: Generating Attractive Visual Captions with Styles, CVPR, 2016&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="IDA"></category><category term="CVPR2016"></category></entry></feed>
+&lt;/ul&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="IDA"></category><category term="CVPR2016"></category></entry></feed>
