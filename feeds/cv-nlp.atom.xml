@@ -42,7 +42,7 @@ Factored LSTMのパラメータSのみを入れ替えつつfacturel captionとst
 &lt;ul&gt;
 &lt;li&gt;人手による評価&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img width="1271" alt="stylenet4" src='https://matasukef.github.io/papers/images/cv/stylenet/stylenet4.png'&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img width="800" alt="stylenet4" src='https://matasukef.github.io/papers/images/cv/stylenet/stylenet4.png'&gt;&lt;/p&gt;
 &lt;h2&gt;5. 議論はあるか？&lt;/h2&gt;
 &lt;p&gt;Facored LSTMによってパラメータ&lt;span class="math"&gt;\(S_x\)&lt;/span&gt;に対してのみスタイルを適用するメカニズムがいまいち謎。
 全体的にお気持論文な傾向がある。。。
