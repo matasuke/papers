@@ -6,17 +6,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="1. どんなもの？ 物体検出によるbottom-up attentionと重み付き平均を用いたtop-down attentionの両方を組み合わせることにより，Image CaptioningとVisual Question Answeringの両方のタスクにおいてSOTAを達成． 2. 先行研究と比べてどこがすごいの？ 従来のImage captioningやVideo...">
         <meta name="keywords" content="CVPR2018, IDG, VQA">
-        <link rel="icon" href="https://matasukef.github.io/papers/favicon.ico">
+        <link rel="icon" href="https://matasuke.github.io/papers/favicon.ico">
 
         <title>Bottom-Up and Top-Down Attention for Image Captioning and Visual Question Answering - Paper Survey</title>
 
         <!-- Stylesheets -->
-        <link href="https://matasukef.github.io/papers/theme/css/all.min.css" rel="stylesheet">
+        <link href="https://matasuke.github.io/papers/theme/css/all.min.css" rel="stylesheet">
         <!-- /Stylesheets -->
 
         <!-- RSS Feeds -->
-        <link href="https://matasukef.github.io/papers/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Paper Survey Full Atom Feed" />
-        <link href="https://matasukef.github.io/papers/feeds/cv.atom.xml" type="application/atom+xml" rel="alternate" title="Paper Survey Categories Atom Feed" />
+        <link href="https://matasuke.github.io/papers/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Paper Survey Full Atom Feed" />
+        <link href="https://matasuke.github.io/papers/feeds/cv.atom.xml" type="application/atom+xml" rel="alternate" title="Paper Survey Categories Atom Feed" />
         <!-- /RSS Feeds -->
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -38,14 +38,14 @@
             <div class="container">
                 <div class="header-nav">
                     <div class="header-logo">
-                        <!--<a class="pull-left" href="https://matasukef.github.io/papers/"><img class="mr20" src="https://matasukef.github.io/papersimages/site_images/s_logo.png" alt="logo">Paper Survey</a> -->
-                        <a class="pull-left" href="https://matasukef.github.io/papers/">Paper Survey</a>
+                        <!--<a class="pull-left" href="https://matasuke.github.io/papers/"><img class="mr20" src="https://matasuke.github.io/papersimages/site_images/s_logo.png" alt="logo">Paper Survey</a> -->
+                        <a class="pull-left" href="https://matasuke.github.io/papers/">Paper Survey</a>
                     </div>
                     <div class="nav pull-right">
-                                <a href="https://matasukef.github.io/papers/paper-survey.html">About</a>
-                                <a href="https://matasukef.github.io/papers/category/cv.html">CV</a>
-                                <a href="https://matasukef.github.io/papers/category/nlp.html">NLP</a>
-                                <a href="https://matasukef.github.io/papers/category/ml.html">ML</a>
+                                <a href="https://matasuke.github.io/papers/paper-survey.html">About</a>
+                                <a href="https://matasuke.github.io/papers/category/cv.html">CV</a>
+                                <a href="https://matasuke.github.io/papers/category/nlp.html">NLP</a>
+                                <a href="https://matasuke.github.io/papers/category/ml.html">ML</a>
                     </div>
                 </div>
             </div>
@@ -58,12 +58,12 @@
               <div class="col-lg-12">
                   <div class="header-content">
                       <h1 class="header-title">Bottom-Up and Top-Down Attention for Image Captioning and Visual Question Answering</h1>
-                      <p class="header-date">By <a href="https://matasukef.github.io/papers/author/kosuke-futamata.html">Kosuke Futamata</a>, Mon 23 July 2018, in category <a href="https://matasukef.github.io/papers/category/cv.html">Cv</a></p>
+                      <p class="header-date">By <a href="https://matasuke.github.io/papers/author/kosuke-futamata.html">Kosuke Futamata</a>, Mon 23 July 2018, in category <a href="https://matasuke.github.io/papers/category/cv.html">Cv</a></p>
                       <div class="header-underline"></div>
                       <div class="clearfix"></div>
                       <p class="pull-right header-tags">
                           <span class="glyphicon glyphicon-tags mr5" aria-hidden="true"></span>
-<a href="https://matasukef.github.io/papers/tag/cvpr2018.html">CVPR2018</a>, <a href="https://matasukef.github.io/papers/tag/idg.html">IDG</a>, <a href="https://matasukef.github.io/papers/tag/vqa.html">VQA</a>                      </p>
+<a href="https://matasuke.github.io/papers/tag/cvpr2018.html">CVPR2018</a>, <a href="https://matasuke.github.io/papers/tag/idg.html">IDG</a>, <a href="https://matasuke.github.io/papers/tag/vqa.html">VQA</a>                      </p>
                   </div>
               </div>
         </div>
@@ -79,7 +79,7 @@
     <div class="container content">
         <h2>1. どんなもの？</h2>
 <p>物体検出によるbottom-up attentionと重み付き平均を用いたtop-down attentionの両方を組み合わせることにより，Image CaptioningとVisual Question Answeringの両方のタスクにおいてSOTAを達成．</p>
-<p><img alt="image1" src="https://matasukef.github.io/papers/images/cv/bottom-up_and_top-down/figure1.png"></p>
+<p><img alt="image1" src="https://matasuke.github.io/papers/images/cv/bottom-up_and_top-down/figure1.png"></p>
 <h2>2. 先行研究と比べてどこがすごいの？</h2>
 <p>従来のImage captioningやVideo Question Answeringのタスクではほとんどの場合，逐次生成されるキャプションの結果や質問と画像のpixel wise feature vectorによる重み付き平均によるtop-down型のvisual attentionを用いる．
 一方で本研究では，画像のpixel wise feature vectoreではなく，Faster R-CNNなどの物体検出アルゴリズムを用いたbottom-up attentionの出力結果に対してtop-down attentionを適用している．</p>
@@ -87,10 +87,10 @@
 <p>bottom-up attentionの出力結果をtop-down attentionに適用している．
 物体検出アルゴリズムとして知られるFaster R-CNNの出力結果である部分画像に対してmean-pooled convolutionを適用したfeature vectoresに対してattentionを貼る．
 さらに，これらfeature vectoresの平均を取ったのをNetworkの入力として用いる．</p>
-<p><img alt="image2" src="https://matasukef.github.io/papers/images/cv/bottom-up_and_top-down/figure2.png"></p>
+<p><img alt="image2" src="https://matasuke.github.io/papers/images/cv/bottom-up_and_top-down/figure2.png"></p>
 <p>bottom-up attentionを用いる以外はImage Captioning及びVisual Question AnsweringのNetworksに変わった構造は見られない．</p>
-<p><img alt="image2" src="https://matasukef.github.io/papers/images/cv/bottom-up_and_top-down/figure3.png"></p>
-<p><img alt="image2" src="https://matasukef.github.io/papers/images/cv/bottom-up_and_top-down/figure4.png"></p>
+<p><img alt="image2" src="https://matasuke.github.io/papers/images/cv/bottom-up_and_top-down/figure3.png"></p>
+<p><img alt="image2" src="https://matasuke.github.io/papers/images/cv/bottom-up_and_top-down/figure4.png"></p>
 <h2>4. どうやって有効だと検証した？</h2>
 <h3>データセット</h3>
 <ul>
@@ -112,13 +112,13 @@
 <li>BLEU, METEOR, ROUGE-L, CIEDErは高いほど良い，</li>
 <li>SPICEは小さいほど良い．</li>
 </ul>
-<p><img alt="image5" src="https://matasukef.github.io/papers/images/cv/bottom-up_and_top-down/figure5.png"></p>
-<p><img alt="image6" src="https://matasukef.github.io/papers/images/cv/bottom-up_and_top-down/figure6.png"></p>
+<p><img alt="image5" src="https://matasuke.github.io/papers/images/cv/bottom-up_and_top-down/figure5.png"></p>
+<p><img alt="image6" src="https://matasuke.github.io/papers/images/cv/bottom-up_and_top-down/figure6.png"></p>
 <p>Image Captioningのタスクでは全ての評価指標において，現SOTAのモデルを上回った．
 VQAのタスクでは，2017 VQA challengeに投稿された全てのモデルを上回る正解率であった．</p>
 <h2>5. 議論はあるか？</h2>
-<p><img alt="image5" src="https://matasukef.github.io/papers/images/cv/bottom-up_and_top-down/figure7.png"></p>
-<p><img alt="image5" src="https://matasukef.github.io/papers/images/cv/bottom-up_and_top-down/figure8.png"></p>
+<p><img alt="image5" src="https://matasuke.github.io/papers/images/cv/bottom-up_and_top-down/figure7.png"></p>
+<p><img alt="image5" src="https://matasuke.github.io/papers/images/cv/bottom-up_and_top-down/figure8.png"></p>
 <h2>6. 次に読むべき論文はあるか？</h2>
 <ul>
 <li><a href="https://arxiv.org/pdf/1708.02711.pdf">'Damien Teney, Peter Anderson, Xiaodong He, Anton van den Hengel', "Tips and Tricks for Visual Question Answering: Learnings from the 2017 Challenge",'2017 VQA Challenge'</a></li>
@@ -135,15 +135,15 @@ and Visual Question Answering"，"CVPR 2018"，2018</a></li>
             <h4>Articles connexes</h4>
             <dl class="dl-horizontal">
                 <dt>Thu 26 July 2018</dt>
-                <dd><a href="https://matasukef.github.io/papers/rich-image-captioning-in-the-wild.html">Rich Image Captioning in the Wild</a></dd>
+                <dd><a href="https://matasuke.github.io/papers/rich-image-captioning-in-the-wild.html">Rich Image Captioning in the Wild</a></dd>
                 <dt>Mon 02 July 2018</dt>
-                <dd><a href="https://matasukef.github.io/papers/semstyle-learning-to-generate-stylised-image-captions-using-unaligned-text.html">SemStyle: Learning to Generate Stylised Image Captions using Unaligned Text</a></dd>
+                <dd><a href="https://matasuke.github.io/papers/semstyle-learning-to-generate-stylised-image-captions-using-unaligned-text.html">SemStyle: Learning to Generate Stylised Image Captions using Unaligned Text</a></dd>
                 <dt>Mon 11 June 2018</dt>
-                <dd><a href="https://matasukef.github.io/papers/show-attend-and-tell-neural-image-caption-generation-with-visual-attention.html">Show, Attend and Tell: Neural Image Caption Generation with Visual Attention</a></dd>
+                <dd><a href="https://matasuke.github.io/papers/show-attend-and-tell-neural-image-caption-generation-with-visual-attention.html">Show, Attend and Tell: Neural Image Caption Generation with Visual Attention</a></dd>
                 <dt>Thu 02 August 2018</dt>
-                <dd><a href="https://matasukef.github.io/papers/stacked-attention-networks-for-image-question-answering.html">Stacked Attention Networks for Image Question Answering</a></dd>
+                <dd><a href="https://matasuke.github.io/papers/stacked-attention-networks-for-image-question-answering.html">Stacked Attention Networks for Image Question Answering</a></dd>
                 <dt>Tue 15 May 2018</dt>
-                <dd><a href="https://matasukef.github.io/papers/video-question-answering-via-hierarchical-spatio-temporal-attention-networks.html">Video Question Answering via Hierarchical Spatio-Temporal Attention Networks</a></dd>
+                <dd><a href="https://matasuke.github.io/papers/video-question-answering-via-hierarchical-spatio-temporal-attention-networks.html">Video Question Answering via Hierarchical Spatio-Temporal Attention Networks</a></dd>
             </dl>
 
         
@@ -157,17 +157,17 @@ and Visual Question Answering"，"CVPR 2018"，2018</a></li>
                     <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
                         <div class="footer-title">Sitemap</div>
                         <ul class="list-unstyled">
-                            <li><a href="https://matasukef.github.io/paperspaper-survey.html">About</a></li>
-                            <li><a href="https://matasukef.github.io/papers/categories.html">Categories</a></li>
-                            <li><a href="https://matasukef.github.io/papers/tags.html">Tags</a></li>
-                            <li><a href="https://matasukef.github.io/papers/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">Atom Feed</a></li>
+                            <li><a href="https://matasuke.github.io/paperspaper-survey.html">About</a></li>
+                            <li><a href="https://matasuke.github.io/papers/categories.html">Categories</a></li>
+                            <li><a href="https://matasuke.github.io/papers/tags.html">Tags</a></li>
+                            <li><a href="https://matasuke.github.io/papers/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">Atom Feed</a></li>
                         </ul>
                     </div>
                     <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
                         <div class="footer-title">Social</div>
                         <ul class="list-unstyled">
                             <li><a href="https://twitter.com/matasuke_f" target="_blank">twitter</a></li>
-                            <li><a href="https://github.com/matasukef" target="_blank">github</a></li>
+                            <li><a href="https://github.com/matasuke" target="_blank">github</a></li>
                             <li><a href="https://www.facebook.com/matasukef" target="_blank">facebook</a></li>
                             <li><a href="https://www.linkedin.com/in/kosuke-futamata-862b68124/" target="_blank">linkedin</a></li>
                         </ul>

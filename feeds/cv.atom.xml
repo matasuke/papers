@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Paper Survey - CV</title><link href="https://matasukef.github.io/papers/" rel="alternate"></link><link href="https://matasukef.github.io/papers/feeds/cv.atom.xml" rel="self"></link><id>https://matasukef.github.io/papers/</id><updated>2018-08-02T00:00:00+09:00</updated><entry><title>Stacked Attention Networks for Image Question Answering</title><link href="https://matasukef.github.io/papers/stacked-attention-networks-for-image-question-answering.html" rel="alternate"></link><published>2018-08-02T00:00:00+09:00</published><updated>2018-08-02T00:00:00+09:00</updated><author><name>Kosuke Futamata</name></author><id>tag:matasukef.github.io,2018-08-02:/papers/stacked-attention-networks-for-image-question-answering.html</id><summary type="html"></summary><content type="html">&lt;h2&gt;1. どんなもの？&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Paper Survey - CV</title><link href="https://matasuke.github.io/papers/" rel="alternate"></link><link href="https://matasuke.github.io/papers/feeds/cv.atom.xml" rel="self"></link><id>https://matasuke.github.io/papers/</id><updated>2018-08-02T00:00:00+09:00</updated><entry><title>Stacked Attention Networks for Image Question Answering</title><link href="https://matasuke.github.io/papers/stacked-attention-networks-for-image-question-answering.html" rel="alternate"></link><published>2018-08-02T00:00:00+09:00</published><updated>2018-08-02T00:00:00+09:00</updated><author><name>Kosuke Futamata</name></author><id>tag:matasuke.github.io,2018-08-02:/papers/stacked-attention-networks-for-image-question-answering.html</id><summary type="html"></summary><content type="html">&lt;h2&gt;1. どんなもの？&lt;/h2&gt;
 &lt;p&gt;Visual Question Answerigに用いられるStacked Attention networkを提案。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://matasukef.github.io/papers/images/cv/stacked-attention-network/figure1.png" alt="image1" title="image1" width="100" height="100"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://matasuke.github.io/papers/images/cv/stacked-attention-network/figure1.png" alt="image1" title="image1" width="100" height="100"&gt;&lt;/p&gt;
 &lt;h2&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
 &lt;p&gt;本論文で提案しているStacked Attention Mechanismを用いることで、VQAのタスクにおいてSOTAを達成。
 また、本論文の投稿時にはAttention mechanismをVQAのタスクに適用したものとしては初。&lt;/p&gt;
@@ -13,11 +13,11 @@ Attentionをスタック構造にすることによって画像内の物体へ�
 Image modelはVGGNetを用いて画像の特徴量を抽出するのに用いられる。
 Question modelはLSTMまたはCNNを用いてQuestionをEncodeする。&lt;/p&gt;
 &lt;p&gt;Stacked Sttention Networksは画像特徴量と質問文の特徴量を用いて画像に対するAttentionを得る。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://matasukef.github.io/papers/images/cv/stacked-attention-network/figure3.png" alt="image1" title="image1" width="100" height="50"&gt;
-&lt;img src="https://matasukef.github.io/papers/images/cv/stacked-attention-network/figure4.png" alt="image1" title="image1" width="200" height="50"&gt;
-&lt;img src="https://matasukef.github.io/papers/images/cv/stacked-attention-network/figure5.png" alt="image1" title="image1" width="200" height="50"&gt;
-&lt;img src="https://matasukef.github.io/papers/images/cv/stacked-attention-network/figure6.png" alt="image1" title="image1" width="200" height="50"&gt;
-&lt;img src="https://matasukef.github.io/papers/images/cv/stacked-attention-network/figure7.png" alt="image1" title="image1" width="200" height="50"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://matasuke.github.io/papers/images/cv/stacked-attention-network/figure3.png" alt="image1" title="image1" width="100" height="50"&gt;
+&lt;img src="https://matasuke.github.io/papers/images/cv/stacked-attention-network/figure4.png" alt="image1" title="image1" width="200" height="50"&gt;
+&lt;img src="https://matasuke.github.io/papers/images/cv/stacked-attention-network/figure5.png" alt="image1" title="image1" width="200" height="50"&gt;
+&lt;img src="https://matasuke.github.io/papers/images/cv/stacked-attention-network/figure6.png" alt="image1" title="image1" width="200" height="50"&gt;
+&lt;img src="https://matasuke.github.io/papers/images/cv/stacked-attention-network/figure7.png" alt="image1" title="image1" width="200" height="50"&gt;&lt;/p&gt;
 &lt;h2&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
 &lt;h3&gt;データセット&lt;/h3&gt;
 &lt;ul&gt;
@@ -27,24 +27,24 @@ Question modelはLSTMまたはCNNを用いてQuestionをEncodeする。&lt;/p&gt
 &lt;li&gt;VQA&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;評価&lt;/h3&gt;
-&lt;p&gt;&lt;img src="https://matasukef.github.io/papers/images/cv/stacked-attention-network/figure8.png" alt="image1" title="image1" width="200" height="200"&gt;
-&lt;img src="https://matasukef.github.io/papers/images/cv/stacked-attention-network/figure9.png" alt="image1" title="image1" width="200" height="200"&gt;
-&lt;img src="https://matasukef.github.io/papers/images/cv/stacked-attention-network/figure10.png" alt="image1" title="image1" width="200" height="200"&gt;
-&lt;img src="https://matasukef.github.io/papers/images/cv/stacked-attention-network/figure11.png" alt="image1" title="image1" width="200" height="200"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://matasuke.github.io/papers/images/cv/stacked-attention-network/figure8.png" alt="image1" title="image1" width="200" height="200"&gt;
+&lt;img src="https://matasuke.github.io/papers/images/cv/stacked-attention-network/figure9.png" alt="image1" title="image1" width="200" height="200"&gt;
+&lt;img src="https://matasuke.github.io/papers/images/cv/stacked-attention-network/figure10.png" alt="image1" title="image1" width="200" height="200"&gt;
+&lt;img src="https://matasuke.github.io/papers/images/cv/stacked-attention-network/figure11.png" alt="image1" title="image1" width="200" height="200"&gt;&lt;/p&gt;
 &lt;p&gt;人間を除く全ての比較対象と比べ提案手法が一番精度が良かった。&lt;/p&gt;
 &lt;h2&gt;5. 議論はあるか？&lt;/h2&gt;
 &lt;p&gt;image captioningやmultimoda NMTの領域にstacked attentionを適用するのも良さそう。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://matasukef.github.io/papers/images/cv/stacked-attention-network/figure14.png" alt="image1" title="image1" width="200" height="200"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://matasuke.github.io/papers/images/cv/stacked-attention-network/figure14.png" alt="image1" title="image1" width="200" height="200"&gt;&lt;/p&gt;
 &lt;p&gt;解答に失敗した例を見るとほとんどの場合、質問文に対するvisual attentionの画像内領域は正しい。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://matasukef.github.io/papers/images/cv/stacked-attention-network/figure15.png" alt="image1" title="image1" width="200" height="200"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://matasuke.github.io/papers/images/cv/stacked-attention-network/figure15.png" alt="image1" title="image1" width="200" height="200"&gt;&lt;/p&gt;
 &lt;h3&gt;論文情報・リンク&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://arxiv.org/pdf/1511.02274.pdf"&gt;"Zichao Yang, Xiaodong He, Jianfeng Gao, Li Deng, Alex Smola"，"Stacked Attention Networks for Image Question Answering"，"CoRR"，2015&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="VQA"></category></entry><entry><title>Rich Image Captioning in the Wild</title><link href="https://matasukef.github.io/papers/rich-image-captioning-in-the-wild.html" rel="alternate"></link><published>2018-07-26T00:00:00+09:00</published><updated>2018-07-26T00:00:00+09:00</updated><author><name>Kosuke Futamata</name></author><id>tag:matasukef.github.io,2018-07-26:/papers/rich-image-captioning-in-the-wild.html</id><summary type="html"></summary><content type="html">&lt;h2&gt;1. どんなもの？&lt;/h2&gt;
+&lt;/ul&gt;</content><category term="VQA"></category></entry><entry><title>Rich Image Captioning in the Wild</title><link href="https://matasuke.github.io/papers/rich-image-captioning-in-the-wild.html" rel="alternate"></link><published>2018-07-26T00:00:00+09:00</published><updated>2018-07-26T00:00:00+09:00</updated><author><name>Kosuke Futamata</name></author><id>tag:matasuke.github.io,2018-07-26:/papers/rich-image-captioning-in-the-wild.html</id><summary type="html"></summary><content type="html">&lt;h2&gt;1. どんなもの？&lt;/h2&gt;
 &lt;p&gt;画像に映る様々なvisual conceptsを含む表現豊かなキャプションを生成する研究。
 近年のimage captioningに関する研究はend-to-endが主であるが、この論文ではいくつかのモジュールから構成されるcompositional modelである。
 人手の評価を用いてcompositional modelにおいてSOTAを達成。&lt;/p&gt;
-&lt;p&gt;&lt;img alt="image1" src="https://matasukef.github.io/papers/images/cv/rich-image-captioning/figure1.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image1" src="https://matasuke.github.io/papers/images/cv/rich-image-captioning/figure1.png"&gt;&lt;/p&gt;
 &lt;p&gt;上記の画像の例では、物体研究を用いることでcelebritiesとlandmarksをキャプションの結果に反映させた例である。&lt;/p&gt;
 &lt;h2&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
 &lt;p&gt;近年のimage captioningに関する研究では主にend-to-endによるMSCOCO captioning datasetやfliker datasetのみを用いる傾向にある。
@@ -54,7 +54,7 @@ Question modelはLSTMまたはCNNを用いてQuestionをEncodeする。&lt;/p&gt
 End-to-Endモデルとの比較は行われていないものの、従来のcompositional modelよりキャプションの精度が良かった。&lt;/p&gt;
 &lt;h2&gt;3. 技術や手法の"キモ"はどこにある？&lt;/h2&gt;
 &lt;p&gt;様々なモジュールの組み合わせることによってimage captioningを行っている。&lt;/p&gt;
-&lt;p&gt;&lt;img alt="image2" src="https://matasukef.github.io/papers/images/cv/rich-image-captioning/figure2.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image2" src="https://matasuke.github.io/papers/images/cv/rich-image-captioning/figure2.png"&gt;&lt;/p&gt;
 &lt;p&gt;CNNベースの分類器を用いて物体の検出(Visual concepts, Celebrity, Landmark)を行い、maximum entropy language model(MELM)によりキャプションを生成する。
 また、Deep multimodal similarity model(DMSM)により、input imageのCNNを適用した後の特徴量とMELMにより生成されたキャプションを同一の意味空間上に落とし込む。
 DMSMにより、画像とキャプションのcosin距離を計算し、キャプションの信頼性のscoreとして用いる。
@@ -62,7 +62,7 @@ Confidence modelは単純なロジスティク回帰モデルである。
 DMSMのscore, MELMのscore, caption lengthなどを特徴量として用いる。
 confidenc modelの確率が高いキャプションはそのまま出力し、低い場合は
 "This image contains XXX, YYY, ZZZ"のよう物体検出の結果を出力する。&lt;/p&gt;
-&lt;p&gt;&lt;img alt="image2" src="https://matasukef.github.io/papers/images/cv/rich-image-captioning/figure3.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image2" src="https://matasuke.github.io/papers/images/cv/rich-image-captioning/figure3.png"&gt;&lt;/p&gt;
 &lt;h2&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
 &lt;h3&gt;データセット&lt;/h3&gt;
 &lt;ul&gt;
@@ -79,14 +79,14 @@ confidenc modelの確率が高いキャプションはそのまま出力し、�
 &lt;/ul&gt;
 &lt;h3&gt;評価&lt;/h3&gt;
 &lt;p&gt;人手の評価を行った。&lt;/p&gt;
-&lt;p&gt;&lt;img alt="image2" src="https://matasukef.github.io/papers/images/cv/rich-image-captioning/figure4.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image2" src="https://matasuke.github.io/papers/images/cv/rich-image-captioning/figure4.png"&gt;&lt;/p&gt;
 &lt;p&gt;compositional modelの従来のSOTAであったモデルよりキャプションの精度が良かった。&lt;/p&gt;
 &lt;h2&gt;5. 議論はあるか？&lt;/h2&gt;
 &lt;p&gt;Bleuなどの評価指標を用いた実験を行っていないため、他のEnd-to-Endモデルとの比較ができない。
 instagram上のopen-domainな画像に対してはExcellent及びGoodと判断されたキャプションが全体の50%であった。&lt;/p&gt;
 &lt;p&gt;Confidence scoreが低い時に物体検出の結果を出力するのはどうかと思った。
 物体検出の結果を出力すれば、Goodの割合が必然的に増加するのではないかと考えられる。&lt;/p&gt;
-&lt;p&gt;&lt;img alt="image2" src="https://matasukef.github.io/papers/images/cv/rich-image-captioning/figure5.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image2" src="https://matasuke.github.io/papers/images/cv/rich-image-captioning/figure5.png"&gt;&lt;/p&gt;
 &lt;h2&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://arxiv.org/pdf/1411.4952.pdf"&gt;'Hao Fang, Saurabh Gupta, Forrest Iandola, Rupesh Srivastava, Li Deng, Piotr Dollár, Jianfeng Gao, Xiaodong He, Margaret Mitchell, John C. Platt, C. Lawrence Zitnick, Geoffrey Zweig', "From Captions to Visual Concepts and Back",'CVPR 2015',2014&lt;/a&gt;&lt;/li&gt;
@@ -94,9 +94,9 @@ instagram上のopen-domainな画像に対してはExcellent及びGoodと判断�
 &lt;h3&gt;論文情報・リンク&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://arxiv.org/pdf/1603.09016.pdf"&gt;"Kenneth Tran, Xiaodong He, Lei Zhang, Jian Sun, Cornelia Carapcea, Chris Thrasher, Chris Buehler, Chris Sienkiewicz"，"Rich Image Captioning in the Wild"，"CVPR 2018"，2018&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="IDG"></category><category term="CVPR2018"></category></entry><entry><title>Bottom-Up and Top-Down Attention for Image Captioning and Visual Question Answering</title><link href="https://matasukef.github.io/papers/bottom-up-and-top-down-attention-for-image-captioning-and-visual-question-answering.html" rel="alternate"></link><published>2018-07-23T00:00:00+09:00</published><updated>2018-07-23T00:00:00+09:00</updated><author><name>Kosuke Futamata</name></author><id>tag:matasukef.github.io,2018-07-23:/papers/bottom-up-and-top-down-attention-for-image-captioning-and-visual-question-answering.html</id><summary type="html"></summary><content type="html">&lt;h2&gt;1. どんなもの？&lt;/h2&gt;
+&lt;/ul&gt;</content><category term="IDG"></category><category term="CVPR2018"></category></entry><entry><title>Bottom-Up and Top-Down Attention for Image Captioning and Visual Question Answering</title><link href="https://matasuke.github.io/papers/bottom-up-and-top-down-attention-for-image-captioning-and-visual-question-answering.html" rel="alternate"></link><published>2018-07-23T00:00:00+09:00</published><updated>2018-07-23T00:00:00+09:00</updated><author><name>Kosuke Futamata</name></author><id>tag:matasuke.github.io,2018-07-23:/papers/bottom-up-and-top-down-attention-for-image-captioning-and-visual-question-answering.html</id><summary type="html"></summary><content type="html">&lt;h2&gt;1. どんなもの？&lt;/h2&gt;
 &lt;p&gt;物体検出によるbottom-up attentionと重み付き平均を用いたtop-down attentionの両方を組み合わせることにより，Image CaptioningとVisual Question Answeringの両方のタスクにおいてSOTAを達成．&lt;/p&gt;
-&lt;p&gt;&lt;img alt="image1" src="https://matasukef.github.io/papers/images/cv/bottom-up_and_top-down/figure1.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image1" src="https://matasuke.github.io/papers/images/cv/bottom-up_and_top-down/figure1.png"&gt;&lt;/p&gt;
 &lt;h2&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
 &lt;p&gt;従来のImage captioningやVideo Question Answeringのタスクではほとんどの場合，逐次生成されるキャプションの結果や質問と画像のpixel wise feature vectorによる重み付き平均によるtop-down型のvisual attentionを用いる．
 一方で本研究では，画像のpixel wise feature vectoreではなく，Faster R-CNNなどの物体検出アルゴリズムを用いたbottom-up attentionの出力結果に対してtop-down attentionを適用している．&lt;/p&gt;
@@ -104,10 +104,10 @@ instagram上のopen-domainな画像に対してはExcellent及びGoodと判断�
 &lt;p&gt;bottom-up attentionの出力結果をtop-down attentionに適用している．
 物体検出アルゴリズムとして知られるFaster R-CNNの出力結果である部分画像に対してmean-pooled convolutionを適用したfeature vectoresに対してattentionを貼る．
 さらに，これらfeature vectoresの平均を取ったのをNetworkの入力として用いる．&lt;/p&gt;
-&lt;p&gt;&lt;img alt="image2" src="https://matasukef.github.io/papers/images/cv/bottom-up_and_top-down/figure2.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image2" src="https://matasuke.github.io/papers/images/cv/bottom-up_and_top-down/figure2.png"&gt;&lt;/p&gt;
 &lt;p&gt;bottom-up attentionを用いる以外はImage Captioning及びVisual Question AnsweringのNetworksに変わった構造は見られない．&lt;/p&gt;
-&lt;p&gt;&lt;img alt="image2" src="https://matasukef.github.io/papers/images/cv/bottom-up_and_top-down/figure3.png"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="image2" src="https://matasukef.github.io/papers/images/cv/bottom-up_and_top-down/figure4.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image2" src="https://matasuke.github.io/papers/images/cv/bottom-up_and_top-down/figure3.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image2" src="https://matasuke.github.io/papers/images/cv/bottom-up_and_top-down/figure4.png"&gt;&lt;/p&gt;
 &lt;h2&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
 &lt;h3&gt;データセット&lt;/h3&gt;
 &lt;ul&gt;
@@ -129,13 +129,13 @@ instagram上のopen-domainな画像に対してはExcellent及びGoodと判断�
 &lt;li&gt;BLEU, METEOR, ROUGE-L, CIEDErは高いほど良い，&lt;/li&gt;
 &lt;li&gt;SPICEは小さいほど良い．&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="image5" src="https://matasukef.github.io/papers/images/cv/bottom-up_and_top-down/figure5.png"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="image6" src="https://matasukef.github.io/papers/images/cv/bottom-up_and_top-down/figure6.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image5" src="https://matasuke.github.io/papers/images/cv/bottom-up_and_top-down/figure5.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image6" src="https://matasuke.github.io/papers/images/cv/bottom-up_and_top-down/figure6.png"&gt;&lt;/p&gt;
 &lt;p&gt;Image Captioningのタスクでは全ての評価指標において，現SOTAのモデルを上回った．
 VQAのタスクでは，2017 VQA challengeに投稿された全てのモデルを上回る正解率であった．&lt;/p&gt;
 &lt;h2&gt;5. 議論はあるか？&lt;/h2&gt;
-&lt;p&gt;&lt;img alt="image5" src="https://matasukef.github.io/papers/images/cv/bottom-up_and_top-down/figure7.png"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="image5" src="https://matasukef.github.io/papers/images/cv/bottom-up_and_top-down/figure8.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image5" src="https://matasuke.github.io/papers/images/cv/bottom-up_and_top-down/figure7.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image5" src="https://matasuke.github.io/papers/images/cv/bottom-up_and_top-down/figure8.png"&gt;&lt;/p&gt;
 &lt;h2&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://arxiv.org/pdf/1708.02711.pdf"&gt;'Damien Teney, Peter Anderson, Xiaodong He, Anton van den Hengel', "Tips and Tricks for Visual Question Answering: Learnings from the 2017 Challenge",'2017 VQA Challenge'&lt;/a&gt;&lt;/li&gt;
@@ -147,17 +147,17 @@ strong baseline for visual question answering.'&lt;/a&gt;&lt;/li&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://www.panderson.me/images/1707.07998-up-down.pdf"&gt;"Peter Anderson, Xiaodong He, Chris Buehler, Damien Teney, Mark Johnson, Stephen Gould, Lei Zhang"，"Bottom-Up and Top-Down Attention for Image Captioning
 and Visual Question Answering"，"CVPR 2018"，2018&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="IDG"></category><category term="VQA"></category><category term="CVPR2018"></category></entry><entry><title>SemStyle: Learning to Generate Stylised Image Captions using Unaligned Text</title><link href="https://matasukef.github.io/papers/semstyle-learning-to-generate-stylised-image-captions-using-unaligned-text.html" rel="alternate"></link><published>2018-07-02T00:00:00+09:00</published><updated>2018-07-02T00:00:00+09:00</updated><author><name>Kosuke Futamata</name></author><id>tag:matasukef.github.io,2018-07-02:/papers/semstyle-learning-to-generate-stylised-image-captions-using-unaligned-text.html</id><summary type="html"></summary><content type="html">&lt;h2&gt;1. どんなもの？&lt;/h2&gt;
+&lt;/ul&gt;</content><category term="IDG"></category><category term="VQA"></category><category term="CVPR2018"></category></entry><entry><title>SemStyle: Learning to Generate Stylised Image Captions using Unaligned Text</title><link href="https://matasuke.github.io/papers/semstyle-learning-to-generate-stylised-image-captions-using-unaligned-text.html" rel="alternate"></link><published>2018-07-02T00:00:00+09:00</published><updated>2018-07-02T00:00:00+09:00</updated><author><name>Kosuke Futamata</name></author><id>tag:matasuke.github.io,2018-07-02:/papers/semstyle-learning-to-generate-stylised-image-captions-using-unaligned-text.html</id><summary type="html"></summary><content type="html">&lt;h2&gt;1. どんなもの？&lt;/h2&gt;
 &lt;p&gt;画像からスタイルを適用したキャプションをUnpaired imagesから生成する研究．
 Term Generatorを用いて画像に関連する単語を生成して，生成された単語列からLanguage Generatornを用いてスタイルを適用したキャプションを生成する．&lt;/p&gt;
-&lt;p&gt;&lt;img alt="image1" src="https://matasukef.github.io/papers/images/cv/semstyle/semstyle1.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image1" src="https://matasuke.github.io/papers/images/cv/semstyle/semstyle1.png"&gt;&lt;/p&gt;
 &lt;h2&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
 &lt;p&gt;画像とキャプションのPaired dataを用いず，キャプションデータのみを用いてスタイルを適用したキャプションを画像から生成する手法を提案.&lt;/p&gt;
 &lt;h2&gt;3. 技術や手法の"キモ"はどこにある？&lt;/h2&gt;
 &lt;p&gt;Term Generator と Language Generatorの階層的構造によってスタイルを適用したキャプションを生成．
 Term Generatorの学習時のみ画像とキャプションから構成されるPaired Dataを用いる．
 Language Generatorの学習には，スタイルが適用されたキャプションのみを用いる．&lt;/p&gt;
-&lt;p&gt;&lt;img alt="image2" src="https://matasukef.github.io/papers/images/cv/semstyle/semstyle2.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image2" src="https://matasuke.github.io/papers/images/cv/semstyle/semstyle2.png"&gt;&lt;/p&gt;
 &lt;h3&gt;Term Generator&lt;/h3&gt;
 &lt;p&gt;意味論的に重要であると考えられる単語の羅列を画像から生成する．
 単語列の生成には，Inception-v3とGRUによるEncoder-Decoder構造を取っている．
@@ -204,20 +204,20 @@ Bi-directionalのGRUにAttentionを適用したEncoder-Decoder構造を取って
 &lt;li&gt;BLEU, METEOR, CIEDErは高いほど良い，&lt;/li&gt;
 &lt;li&gt;SPICE, CLF, LM, GRULMは小さいほど良い．&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="image3" src="https://matasukef.github.io/papers/images/cv/semstyle/semstyle3.png"&gt;
-&lt;img alt="image4" src="https://matasukef.github.io/papers/images/cv/semstyle/semstyle4.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image3" src="https://matasuke.github.io/papers/images/cv/semstyle/semstyle3.png"&gt;
+&lt;img alt="image4" src="https://matasuke.github.io/papers/images/cv/semstyle/semstyle4.png"&gt;&lt;/p&gt;
 &lt;h4&gt;human evaluation&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;(a) 生成されたキャプションがどれほど画像の状況を言い表しているか．&lt;/li&gt;
 &lt;li&gt;(b) 生成されたキャプションがUnrelated, Descriptive, Styledのどれに属するか.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="image6" src="https://matasukef.github.io/papers/images/cv/semstyle/semstyle6.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image6" src="https://matasuke.github.io/papers/images/cv/semstyle/semstyle6.png"&gt;&lt;/p&gt;
 &lt;h2&gt;5. 議論はあるか？&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;(a), (b),(c), (d)は正しく生成されたキャプション．&lt;/li&gt;
 &lt;li&gt;(e), (f)は生成に失敗したキャプション&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="image5" src="https://matasukef.github.io/papers/images/cv/semstyle/semstyle5.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image5" src="https://matasuke.github.io/papers/images/cv/semstyle/semstyle5.png"&gt;&lt;/p&gt;
 &lt;p&gt;生成に成功したキャプションでは，Storyの方がDescriptiveより印象深い単語を使用していることが読み取れる．
 また，過去形や定冠詞の使用，一人称視点からの叙述が見られる．&lt;/p&gt;
 &lt;p&gt;失敗例は文法的には正しいが，常識に反するものが多く見られる．&lt;/p&gt;
@@ -229,7 +229,7 @@ Bi-directionalのGRUにAttentionを適用したEncoder-Decoder構造を取って
 &lt;h3&gt;論文情報・リンク&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://arxiv.org/abs/1805.07030"&gt;"Alexander Mathews, Lexing Xie, Xuming He"，"SemStyle: Learning to Generate Stylised Image Captions using Unaligned Text"，"CVPR 2018"，2018&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="IDG"></category><category term="CVPR2018"></category></entry><entry><title>2D/3D Pose Estimation and Action Recognition using Multitask Deep Learning</title><link href="https://matasukef.github.io/papers/2d3d-pose-estimation-and-action-recognition-using-multitask-deep-learning.html" rel="alternate"></link><published>2018-06-12T00:00:00+09:00</published><updated>2018-06-12T00:00:00+09:00</updated><author><name>Kosuke Futamata</name></author><id>tag:matasukef.github.io,2018-06-12:/papers/2d3d-pose-estimation-and-action-recognition-using-multitask-deep-learning.html</id><summary type="html"></summary><content type="html">&lt;h2&gt;1. どんなもの？&lt;/h2&gt;
+&lt;/ul&gt;</content><category term="IDG"></category><category term="CVPR2018"></category></entry><entry><title>2D/3D Pose Estimation and Action Recognition using Multitask Deep Learning</title><link href="https://matasuke.github.io/papers/2d3d-pose-estimation-and-action-recognition-using-multitask-deep-learning.html" rel="alternate"></link><published>2018-06-12T00:00:00+09:00</published><updated>2018-06-12T00:00:00+09:00</updated><author><name>Kosuke Futamata</name></author><id>tag:matasuke.github.io,2018-06-12:/papers/2d3d-pose-estimation-and-action-recognition-using-multitask-deep-learning.html</id><summary type="html"></summary><content type="html">&lt;h2&gt;1. どんなもの？&lt;/h2&gt;
 &lt;h2&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
 &lt;h2&gt;3. 技術や手法の"キモ"はどこにある？&lt;/h2&gt;
 &lt;h2&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
@@ -240,7 +240,7 @@ for Human Pose Estimation&lt;/p&gt;
 &lt;h3&gt;論文情報・リンク&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="論文リンク"&gt;著者，"タイトル，" ジャーナル名，voluem，no.，ページ，年&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="Pose Estimation"></category><category term="Action Recognition"></category></entry><entry><title>Show, Attend and Tell: Neural Image Caption Generation with Visual Attention</title><link href="https://matasukef.github.io/papers/show-attend-and-tell-neural-image-caption-generation-with-visual-attention.html" rel="alternate"></link><published>2018-06-11T00:00:00+09:00</published><updated>2018-06-11T00:00:00+09:00</updated><author><name>Kosuke Futamata</name></author><id>tag:matasukef.github.io,2018-06-11:/papers/show-attend-and-tell-neural-image-caption-generation-with-visual-attention.html</id><summary type="html"></summary><content type="html">&lt;h2&gt;1. どんなもの？&lt;/h2&gt;
+&lt;/ul&gt;</content><category term="Pose Estimation"></category><category term="Action Recognition"></category></entry><entry><title>Show, Attend and Tell: Neural Image Caption Generation with Visual Attention</title><link href="https://matasuke.github.io/papers/show-attend-and-tell-neural-image-caption-generation-with-visual-attention.html" rel="alternate"></link><published>2018-06-11T00:00:00+09:00</published><updated>2018-06-11T00:00:00+09:00</updated><author><name>Kosuke Futamata</name></author><id>tag:matasuke.github.io,2018-06-11:/papers/show-attend-and-tell-neural-image-caption-generation-with-visual-attention.html</id><summary type="html"></summary><content type="html">&lt;h2&gt;1. どんなもの？&lt;/h2&gt;
 &lt;h2&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
 &lt;h2&gt;3. 技術や手法の"キモ"はどこにある？&lt;/h2&gt;
 &lt;h2&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
@@ -250,7 +250,7 @@ for Human Pose Estimation&lt;/p&gt;
 &lt;p&gt;https://github.com/kelvinxu/arctic-captions&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="論文リンク"&gt;著者，"タイトル，" ジャーナル名，voluem，no.，ページ，年&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="IDG"></category><category term="Attention"></category></entry><entry><title>Video Question Answering via Hierarchical Spatio-Temporal Attention Networks</title><link href="https://matasukef.github.io/papers/video-question-answering-via-hierarchical-spatio-temporal-attention-networks.html" rel="alternate"></link><published>2018-05-15T00:00:00+09:00</published><updated>2018-05-15T00:00:00+09:00</updated><author><name>Kosuke Futamata</name></author><id>tag:matasukef.github.io,2018-05-15:/papers/video-question-answering-via-hierarchical-spatio-temporal-attention-networks.html</id><summary type="html"></summary><content type="html">&lt;h2&gt;1. どんなもの？&lt;/h2&gt;
+&lt;/ul&gt;</content><category term="IDG"></category><category term="Attention"></category></entry><entry><title>Video Question Answering via Hierarchical Spatio-Temporal Attention Networks</title><link href="https://matasuke.github.io/papers/video-question-answering-via-hierarchical-spatio-temporal-attention-networks.html" rel="alternate"></link><published>2018-05-15T00:00:00+09:00</published><updated>2018-05-15T00:00:00+09:00</updated><author><name>Kosuke Futamata</name></author><id>tag:matasuke.github.io,2018-05-15:/papers/video-question-answering-via-hierarchical-spatio-temporal-attention-networks.html</id><summary type="html"></summary><content type="html">&lt;h2&gt;1. どんなもの？&lt;/h2&gt;
 &lt;p&gt;VQA(Video Question Answering)の研究．
 質問に関連する重要な動画フレームの連続を学習するHierachical Spatio-Temporal Attention Networksを提案．&lt;/p&gt;
 &lt;p&gt;&lt;img alt="image1" src="{filename}/content/images/cv/VQA/image1.png"&gt;&lt;/p&gt;

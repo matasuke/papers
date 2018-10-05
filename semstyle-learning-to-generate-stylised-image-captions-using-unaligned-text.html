@@ -6,17 +6,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="1. どんなもの？ 画像からスタイルを適用したキャプションをUnpaired imagesから生成する研究． Term Generatorを用いて画像に関連する単語を生成して，生成された単語列からLanguage Generatornを用いてスタイルを適用したキャプションを生成する． 2. 先行研究と比べてどこがすごいの？ 画像とキャプションのPaired...">
         <meta name="keywords" content="CVPR2018, IDG">
-        <link rel="icon" href="https://matasukef.github.io/papers/favicon.ico">
+        <link rel="icon" href="https://matasuke.github.io/papers/favicon.ico">
 
         <title>SemStyle: Learning to Generate Stylised Image Captions using Unaligned Text - Paper Survey</title>
 
         <!-- Stylesheets -->
-        <link href="https://matasukef.github.io/papers/theme/css/all.min.css" rel="stylesheet">
+        <link href="https://matasuke.github.io/papers/theme/css/all.min.css" rel="stylesheet">
         <!-- /Stylesheets -->
 
         <!-- RSS Feeds -->
-        <link href="https://matasukef.github.io/papers/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Paper Survey Full Atom Feed" />
-        <link href="https://matasukef.github.io/papers/feeds/cv.atom.xml" type="application/atom+xml" rel="alternate" title="Paper Survey Categories Atom Feed" />
+        <link href="https://matasuke.github.io/papers/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Paper Survey Full Atom Feed" />
+        <link href="https://matasuke.github.io/papers/feeds/cv.atom.xml" type="application/atom+xml" rel="alternate" title="Paper Survey Categories Atom Feed" />
         <!-- /RSS Feeds -->
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -38,14 +38,14 @@
             <div class="container">
                 <div class="header-nav">
                     <div class="header-logo">
-                        <!--<a class="pull-left" href="https://matasukef.github.io/papers/"><img class="mr20" src="https://matasukef.github.io/papersimages/site_images/s_logo.png" alt="logo">Paper Survey</a> -->
-                        <a class="pull-left" href="https://matasukef.github.io/papers/">Paper Survey</a>
+                        <!--<a class="pull-left" href="https://matasuke.github.io/papers/"><img class="mr20" src="https://matasuke.github.io/papersimages/site_images/s_logo.png" alt="logo">Paper Survey</a> -->
+                        <a class="pull-left" href="https://matasuke.github.io/papers/">Paper Survey</a>
                     </div>
                     <div class="nav pull-right">
-                                <a href="https://matasukef.github.io/papers/paper-survey.html">About</a>
-                                <a href="https://matasukef.github.io/papers/category/cv.html">CV</a>
-                                <a href="https://matasukef.github.io/papers/category/nlp.html">NLP</a>
-                                <a href="https://matasukef.github.io/papers/category/ml.html">ML</a>
+                                <a href="https://matasuke.github.io/papers/paper-survey.html">About</a>
+                                <a href="https://matasuke.github.io/papers/category/cv.html">CV</a>
+                                <a href="https://matasuke.github.io/papers/category/nlp.html">NLP</a>
+                                <a href="https://matasuke.github.io/papers/category/ml.html">ML</a>
                     </div>
                 </div>
             </div>
@@ -58,12 +58,12 @@
               <div class="col-lg-12">
                   <div class="header-content">
                       <h1 class="header-title">SemStyle: Learning to Generate Stylised Image Captions using Unaligned Text</h1>
-                      <p class="header-date">By <a href="https://matasukef.github.io/papers/author/kosuke-futamata.html">Kosuke Futamata</a>, Mon 02 July 2018, in category <a href="https://matasukef.github.io/papers/category/cv.html">Cv</a></p>
+                      <p class="header-date">By <a href="https://matasuke.github.io/papers/author/kosuke-futamata.html">Kosuke Futamata</a>, Mon 02 July 2018, in category <a href="https://matasuke.github.io/papers/category/cv.html">Cv</a></p>
                       <div class="header-underline"></div>
                       <div class="clearfix"></div>
                       <p class="pull-right header-tags">
                           <span class="glyphicon glyphicon-tags mr5" aria-hidden="true"></span>
-<a href="https://matasukef.github.io/papers/tag/cvpr2018.html">CVPR2018</a>, <a href="https://matasukef.github.io/papers/tag/idg.html">IDG</a>                      </p>
+<a href="https://matasuke.github.io/papers/tag/cvpr2018.html">CVPR2018</a>, <a href="https://matasuke.github.io/papers/tag/idg.html">IDG</a>                      </p>
                   </div>
               </div>
         </div>
@@ -80,14 +80,14 @@
         <h2>1. どんなもの？</h2>
 <p>画像からスタイルを適用したキャプションをUnpaired imagesから生成する研究．
 Term Generatorを用いて画像に関連する単語を生成して，生成された単語列からLanguage Generatornを用いてスタイルを適用したキャプションを生成する．</p>
-<p><img alt="image1" src="https://matasukef.github.io/papers/images/cv/semstyle/semstyle1.png"></p>
+<p><img alt="image1" src="https://matasuke.github.io/papers/images/cv/semstyle/semstyle1.png"></p>
 <h2>2. 先行研究と比べてどこがすごいの？</h2>
 <p>画像とキャプションのPaired dataを用いず，キャプションデータのみを用いてスタイルを適用したキャプションを画像から生成する手法を提案.</p>
 <h2>3. 技術や手法の"キモ"はどこにある？</h2>
 <p>Term Generator と Language Generatorの階層的構造によってスタイルを適用したキャプションを生成．
 Term Generatorの学習時のみ画像とキャプションから構成されるPaired Dataを用いる．
 Language Generatorの学習には，スタイルが適用されたキャプションのみを用いる．</p>
-<p><img alt="image2" src="https://matasukef.github.io/papers/images/cv/semstyle/semstyle2.png"></p>
+<p><img alt="image2" src="https://matasuke.github.io/papers/images/cv/semstyle/semstyle2.png"></p>
 <h3>Term Generator</h3>
 <p>意味論的に重要であると考えられる単語の羅列を画像から生成する．
 単語列の生成には，Inception-v3とGRUによるEncoder-Decoder構造を取っている．
@@ -134,20 +134,20 @@ Bi-directionalのGRUにAttentionを適用したEncoder-Decoder構造を取って
 <li>BLEU, METEOR, CIEDErは高いほど良い，</li>
 <li>SPICE, CLF, LM, GRULMは小さいほど良い．</li>
 </ul>
-<p><img alt="image3" src="https://matasukef.github.io/papers/images/cv/semstyle/semstyle3.png">
-<img alt="image4" src="https://matasukef.github.io/papers/images/cv/semstyle/semstyle4.png"></p>
+<p><img alt="image3" src="https://matasuke.github.io/papers/images/cv/semstyle/semstyle3.png">
+<img alt="image4" src="https://matasuke.github.io/papers/images/cv/semstyle/semstyle4.png"></p>
 <h4>human evaluation</h4>
 <ul>
 <li>(a) 生成されたキャプションがどれほど画像の状況を言い表しているか．</li>
 <li>(b) 生成されたキャプションがUnrelated, Descriptive, Styledのどれに属するか.</li>
 </ul>
-<p><img alt="image6" src="https://matasukef.github.io/papers/images/cv/semstyle/semstyle6.png"></p>
+<p><img alt="image6" src="https://matasuke.github.io/papers/images/cv/semstyle/semstyle6.png"></p>
 <h2>5. 議論はあるか？</h2>
 <ul>
 <li>(a), (b),(c), (d)は正しく生成されたキャプション．</li>
 <li>(e), (f)は生成に失敗したキャプション</li>
 </ul>
-<p><img alt="image5" src="https://matasukef.github.io/papers/images/cv/semstyle/semstyle5.png"></p>
+<p><img alt="image5" src="https://matasuke.github.io/papers/images/cv/semstyle/semstyle5.png"></p>
 <p>生成に成功したキャプションでは，Storyの方がDescriptiveより印象深い単語を使用していることが読み取れる．
 また，過去形や定冠詞の使用，一人称視点からの叙述が見られる．</p>
 <p>失敗例は文法的には正しいが，常識に反するものが多く見られる．</p>
@@ -164,11 +164,11 @@ Bi-directionalのGRUにAttentionを適用したEncoder-Decoder構造を取って
             <h4>Articles connexes</h4>
             <dl class="dl-horizontal">
                 <dt>Thu 26 July 2018</dt>
-                <dd><a href="https://matasukef.github.io/papers/rich-image-captioning-in-the-wild.html">Rich Image Captioning in the Wild</a></dd>
+                <dd><a href="https://matasuke.github.io/papers/rich-image-captioning-in-the-wild.html">Rich Image Captioning in the Wild</a></dd>
                 <dt>Mon 23 July 2018</dt>
-                <dd><a href="https://matasukef.github.io/papers/bottom-up-and-top-down-attention-for-image-captioning-and-visual-question-answering.html">Bottom-Up and Top-Down Attention for Image Captioning and Visual Question Answering</a></dd>
+                <dd><a href="https://matasuke.github.io/papers/bottom-up-and-top-down-attention-for-image-captioning-and-visual-question-answering.html">Bottom-Up and Top-Down Attention for Image Captioning and Visual Question Answering</a></dd>
                 <dt>Mon 11 June 2018</dt>
-                <dd><a href="https://matasukef.github.io/papers/show-attend-and-tell-neural-image-caption-generation-with-visual-attention.html">Show, Attend and Tell: Neural Image Caption Generation with Visual Attention</a></dd>
+                <dd><a href="https://matasuke.github.io/papers/show-attend-and-tell-neural-image-caption-generation-with-visual-attention.html">Show, Attend and Tell: Neural Image Caption Generation with Visual Attention</a></dd>
             </dl>
 
         
@@ -182,17 +182,17 @@ Bi-directionalのGRUにAttentionを適用したEncoder-Decoder構造を取って
                     <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
                         <div class="footer-title">Sitemap</div>
                         <ul class="list-unstyled">
-                            <li><a href="https://matasukef.github.io/paperspaper-survey.html">About</a></li>
-                            <li><a href="https://matasukef.github.io/papers/categories.html">Categories</a></li>
-                            <li><a href="https://matasukef.github.io/papers/tags.html">Tags</a></li>
-                            <li><a href="https://matasukef.github.io/papers/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">Atom Feed</a></li>
+                            <li><a href="https://matasuke.github.io/paperspaper-survey.html">About</a></li>
+                            <li><a href="https://matasuke.github.io/papers/categories.html">Categories</a></li>
+                            <li><a href="https://matasuke.github.io/papers/tags.html">Tags</a></li>
+                            <li><a href="https://matasuke.github.io/papers/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">Atom Feed</a></li>
                         </ul>
                     </div>
                     <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
                         <div class="footer-title">Social</div>
                         <ul class="list-unstyled">
                             <li><a href="https://twitter.com/matasuke_f" target="_blank">twitter</a></li>
-                            <li><a href="https://github.com/matasukef" target="_blank">github</a></li>
+                            <li><a href="https://github.com/matasuke" target="_blank">github</a></li>
                             <li><a href="https://www.facebook.com/matasukef" target="_blank">facebook</a></li>
                             <li><a href="https://www.linkedin.com/in/kosuke-futamata-862b68124/" target="_blank">linkedin</a></li>
                         </ul>
